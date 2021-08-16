@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<base href="">
+	<meta charset="utf-8" />
+	<title>Admin Design </title>
+	<meta name="description"
+		content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<style type="text/css">
+		#new_appointment_date:before {
+			font-family: "Font Awesome 5 Free";
+			content: "\f107";
+		}
+
+		select#schedule_end_repeat,
+		input#schedule_date_end,
+		select#schedule_repeats {
+			padding: 0.65rem 0.5rem;
+		}
+	</style>
+</head>
+
+
+
+
+<body id="kt_body" class="bg-white">
+	<div class="container-fluid p-0">
+		<div class="my-custom-body-wrapper">
+			<div class="my-custom-header">
+				<div class="p-4 d-flex justify-content-between align-items-center border-bottom">
+					<h2 class="m-auto font-weight-bolder">New Appointment</h2>
+					<span class="d-flex">
+						<p class="cursor-pointer m-0 px-6" onclick="history.back();"><i
+								class="text-dark fa fa-times icon-lg"></i>
+						</p>
+					</span>
+				</div>
+			</div>
+			<div class="my-custom-body">
+				<div class="container-fluid ">
+					<div class="row">
+						<div class="col-12 col-md-8 p-0 bg-white" style="height:calc(100vh - 55px);overflow-y:scroll">
+							<div class="px-10">
+								<div class="container p-12 position-relative">
+									<div class="mb-6">
+										<h4
+											class="align-items-center d-flex font-weight-bolder justify-content-between mb-8">
+											<input type="text" class="border-0 cursor-pointer" id="new_appointment_date"
+												readonly="readonly" placeholder="Select date" />
+											<a href="javascrip:void(0)" data-toggle="modal" data-target="#repeatModal"
+												class="text-blue"><i
+													class="flaticon-refresh mr-3 text-blue"></i>Repeat</a>
+										</h4>
+										<ul class="StepProgress p-0">
+											<li class="StepProgress-item current">
+												<div class="shadow-sm card">
+													<div class="card-body p-6">
+														<div class="row">
+															<div class="col-md-3 col-sm-4">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Start
+																		time</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option value="0">12:00am</option>
+																			<option value="300">12:05am</option>
+																			<option value="600">12:10am</option>
+																			<option value="900">12:15am</option>
+																			<option value="1200">12:20am</option>
+																			<option value="1500">12:25am</option>
+																			<option value="1800">12:30am</option>
+																			<option value="2100">12:35am</option>
+																			<option value="2400">12:40am</option>
+																			<option value="2700">12:45am</option>
+																			<option value="3000">12:50am</option>
+																			<option value="3300">12:55am</option>
+																			<option value="3600">1:00am</option>
+																			<option value="3900">1:05am</option>
+																			<option value="4200">1:10am</option>
+																			<option value="4500">1:15am</option>
+																			<option value="4800">1:20am</option>
+																			<option value="5100">1:25am</option>
+																			<option value="5400">1:30am</option>
+																			<option value="5700">1:35am</option>
+																			<option value="6000">1:40am</option>
+																			<option value="6300">1:45am</option>
+																			<option value="6600">1:50am</option>
+																			<option value="6900">1:55am</option>
+																			<option value="7200">2:00am</option>
+																			<option value="7500">2:05am</option>
+																			<option value="7800">2:10am</option>
+																			<option value="8100">2:15am</option>
+																			<option value="8400">2:20am</option>
+																			<option value="8700">2:25am</option>
+																			<option value="9000">2:30am</option>
+																			<option value="9300">2:35am</option>
+																			<option value="9600">2:40am</option>
+																			<option value="9900">2:45am</option>
+																			<option value="10200">2:50am</option>
+																			<option value="10500">2:55am</option>
+																			<option value="10800">3:00am</option>
+																			<option value="11100">3:05am</option>
+																			<option value="11400">3:10am</option>
+																			<option value="11700">3:15am</option>
+																			<option value="12000">3:20am</option>
+																			<option value="12300">3:25am</option>
+																			<option value="12600">3:30am</option>
+																			<option value="12900">3:35am</option>
+																			<option value="13200">3:40am</option>
+																			<option value="13500">3:45am</option>
+																			<option value="13800">3:50am</option>
+																			<option value="14100">3:55am</option>
+																			<option value="14400">4:00am</option>
+																			<option value="14700">4:05am</option>
+																			<option value="15000">4:10am</option>
+																			<option value="15300">4:15am</option>
+																			<option value="15600">4:20am</option>
+																			<option value="15900">4:25am</option>
+																			<option value="16200">4:30am</option>
+																			<option value="16500">4:35am</option>
+																			<option value="16800">4:40am</option>
+																			<option value="17100">4:45am</option>
+																			<option value="17400">4:50am</option>
+																			<option value="17700">4:55am</option>
+																			<option value="18000">5:00am</option>
+																			<option value="18300">5:05am</option>
+																			<option value="18600">5:10am</option>
+																			<option value="18900">5:15am</option>
+																			<option value="19200">5:20am</option>
+																			<option value="19500">5:25am</option>
+																			<option value="19800">5:30am</option>
+																			<option value="20100">5:35am</option>
+																			<option value="20400">5:40am</option>
+																			<option value="20700">5:45am</option>
+																			<option value="21000">5:50am</option>
+																			<option value="21300">5:55am</option>
+																			<option value="21600">6:00am</option>
+																			<option value="21900">6:05am</option>
+																			<option value="22200">6:10am</option>
+																			<option value="22500">6:15am</option>
+																			<option value="22800">6:20am</option>
+																			<option value="23100">6:25am</option>
+																			<option value="23400">6:30am</option>
+																			<option value="23700">6:35am</option>
+																			<option value="24000">6:40am</option>
+																			<option value="24300">6:45am</option>
+																			<option value="24600">6:50am</option>
+																			<option value="24900">6:55am</option>
+																			<option value="25200">7:00am</option>
+																			<option value="25500">7:05am</option>
+																			<option value="25800">7:10am</option>
+																			<option value="26100">7:15am</option>
+																			<option value="26400">7:20am</option>
+																			<option value="26700">7:25am</option>
+																			<option value="27000">7:30am</option>
+																			<option value="27300">7:35am</option>
+																			<option value="27600">7:40am</option>
+																			<option value="27900">7:45am</option>
+																			<option value="28200">7:50am</option>
+																			<option value="28500">7:55am</option>
+																			<option value="28800">8:00am</option>
+																			<option value="29100">8:05am</option>
+																			<option value="29400">8:10am</option>
+																			<option value="29700">8:15am</option>
+																			<option value="30000">8:20am</option>
+																			<option value="30300">8:25am</option>
+																			<option value="30600">8:30am</option>
+																			<option value="30900">8:35am</option>
+																			<option value="31200">8:40am</option>
+																			<option value="31500">8:45am</option>
+																			<option value="31800">8:50am</option>
+																			<option value="32100">8:55am</option>
+																			<option value="32400">9:00am</option>
+																			<option value="32700">9:05am</option>
+																			<option value="33000">9:10am</option>
+																			<option value="33300">9:15am</option>
+																			<option value="33600">9:20am</option>
+																			<option value="33900">9:25am</option>
+																			<option value="34200">9:30am</option>
+																			<option value="34500">9:35am</option>
+																			<option value="34800">9:40am</option>
+																			<option value="35100">9:45am</option>
+																			<option value="35400">9:50am</option>
+																			<option value="35700">9:55am</option>
+																			<option value="36000">10:00am</option>
+																			<option value="36300">10:05am</option>
+																			<option value="36600">10:10am</option>
+																			<option value="36900">10:15am</option>
+																			<option value="37200">10:20am</option>
+																			<option value="37500">10:25am</option>
+																			<option value="37800">10:30am</option>
+																			<option value="38100">10:35am</option>
+																			<option value="38400">10:40am</option>
+																			<option value="38700">10:45am</option>
+																			<option value="39000">10:50am</option>
+																			<option value="39300">10:55am</option>
+																			<option value="39600">11:00am</option>
+																			<option value="39900">11:05am</option>
+																			<option value="40200">11:10am</option>
+																			<option value="40500">11:15am</option>
+																			<option value="40800">11:20am</option>
+																			<option value="41100">11:25am</option>
+																			<option value="41400">11:30am</option>
+																			<option value="41700">11:35am</option>
+																			<option value="42000">11:40am</option>
+																			<option value="42300">11:45am</option>
+																			<option value="42600">11:50am</option>
+																			<option value="42900">11:55am</option>
+																			<option value="43200">12:00pm</option>
+																			<option value="43500">12:05pm</option>
+																			<option value="43800">12:10pm</option>
+																			<option value="44100">12:15pm</option>
+																			<option value="44400">12:20pm</option>
+																			<option value="44700">12:25pm</option>
+																			<option value="45000">12:30pm</option>
+																			<option value="45300">12:35pm</option>
+																			<option value="45600">12:40pm</option>
+																			<option value="45900">12:45pm</option>
+																			<option value="46200">12:50pm</option>
+																			<option value="46500">12:55pm</option>
+																			<option value="46800">1:00pm</option>
+																			<option value="47100">1:05pm</option>
+																			<option value="47400">1:10pm</option>
+																			<option value="47700">1:15pm</option>
+																			<option value="48000">1:20pm</option>
+																			<option value="48300">1:25pm</option>
+																			<option value="48600">1:30pm</option>
+																			<option value="48900">1:35pm</option>
+																			<option value="49200">1:40pm</option>
+																			<option value="49500">1:45pm</option>
+																			<option value="49800">1:50pm</option>
+																			<option value="50100">1:55pm</option>
+																			<option value="50400">2:00pm</option>
+																			<option value="50700">2:05pm</option>
+																			<option value="51000">2:10pm</option>
+																			<option value="51300">2:15pm</option>
+																			<option value="51600">2:20pm</option>
+																			<option value="51900">2:25pm</option>
+																			<option value="52200">2:30pm</option>
+																			<option value="52500">2:35pm</option>
+																			<option value="52800">2:40pm</option>
+																			<option value="53100">2:45pm</option>
+																			<option value="53400">2:50pm</option>
+																			<option value="53700">2:55pm</option>
+																			<option value="54000">3:00pm</option>
+																			<option value="54300">3:05pm</option>
+																			<option value="54600">3:10pm</option>
+																			<option value="54900">3:15pm</option>
+																			<option value="55200">3:20pm</option>
+																			<option value="55500">3:25pm</option>
+																			<option value="55800">3:30pm</option>
+																			<option value="56100">3:35pm</option>
+																			<option value="56400">3:40pm</option>
+																			<option value="56700">3:45pm</option>
+																			<option value="57000">3:50pm</option>
+																			<option value="57300">3:55pm</option>
+																			<option value="57600">4:00pm</option>
+																			<option value="57900">4:05pm</option>
+																			<option value="58200">4:10pm</option>
+																			<option value="58500">4:15pm</option>
+																			<option value="58800">4:20pm</option>
+																			<option value="59100">4:25pm</option>
+																			<option value="59400">4:30pm</option>
+																			<option value="59700">4:35pm</option>
+																			<option value="60000">4:40pm</option>
+																			<option value="60300">4:45pm</option>
+																			<option value="60600">4:50pm</option>
+																			<option value="60900">4:55pm</option>
+																			<option value="61200">5:00pm</option>
+																			<option value="61500">5:05pm</option>
+																			<option value="61800">5:10pm</option>
+																			<option value="62100">5:15pm</option>
+																			<option value="62400">5:20pm</option>
+																			<option value="62700">5:25pm</option>
+																			<option value="63000">5:30pm</option>
+																			<option value="63300">5:35pm</option>
+																			<option value="63600">5:40pm</option>
+																			<option value="63900">5:45pm</option>
+																			<option value="64200">5:50pm</option>
+																			<option value="64500">5:55pm</option>
+																			<option value="64800">6:00pm</option>
+																			<option value="65100">6:05pm</option>
+																			<option value="65400">6:10pm</option>
+																			<option value="65700">6:15pm</option>
+																			<option value="66000">6:20pm</option>
+																			<option value="66300">6:25pm</option>
+																			<option value="66600">6:30pm</option>
+																			<option value="66900">6:35pm</option>
+																			<option value="67200">6:40pm</option>
+																			<option value="67500">6:45pm</option>
+																			<option value="67800">6:50pm</option>
+																			<option value="68100">6:55pm</option>
+																			<option value="68400">7:00pm</option>
+																			<option value="68700">7:05pm</option>
+																			<option value="69000">7:10pm</option>
+																			<option value="69300">7:15pm</option>
+																			<option value="69600">7:20pm</option>
+																			<option value="69900">7:25pm</option>
+																			<option value="70200">7:30pm</option>
+																			<option value="70500">7:35pm</option>
+																			<option value="70800">7:40pm</option>
+																			<option value="71100">7:45pm</option>
+																			<option value="71400">7:50pm</option>
+																			<option value="71700">7:55pm</option>
+																			<option value="72000">8:00pm</option>
+																			<option value="72300">8:05pm</option>
+																			<option value="72600">8:10pm</option>
+																			<option value="72900">8:15pm</option>
+																			<option value="73200">8:20pm</option>
+																			<option value="73500">8:25pm</option>
+																			<option value="73800">8:30pm</option>
+																			<option value="74100">8:35pm</option>
+																			<option value="74400">8:40pm</option>
+																			<option value="74700">8:45pm</option>
+																			<option value="75000">8:50pm</option>
+																			<option value="75300">8:55pm</option>
+																			<option value="75600">9:00pm</option>
+																			<option value="75900">9:05pm</option>
+																			<option value="76200">9:10pm</option>
+																			<option value="76500">9:15pm</option>
+																			<option value="76800">9:20pm</option>
+																			<option value="77100">9:25pm</option>
+																			<option value="77400">9:30pm</option>
+																			<option value="77700">9:35pm</option>
+																			<option value="78000">9:40pm</option>
+																			<option value="78300">9:45pm</option>
+																			<option value="78600">9:50pm</option>
+																			<option value="78900">9:55pm</option>
+																			<option value="79200">10:00pm</option>
+																			<option value="79500">10:05pm</option>
+																			<option value="79800">10:10pm</option>
+																			<option value="80100">10:15pm</option>
+																			<option value="80400">10:20pm</option>
+																			<option value="80700">10:25pm</option>
+																			<option value="81000">10:30pm</option>
+																			<option value="81300">10:35pm</option>
+																			<option value="81600">10:40pm</option>
+																			<option value="81900">10:45pm</option>
+																			<option value="82200">10:50pm</option>
+																			<option value="82500">10:55pm</option>
+																			<option value="82800">11:00pm</option>
+																			<option value="83100">11:05pm</option>
+																			<option value="83400">11:10pm</option>
+																			<option value="83700">11:15pm</option>
+																			<option value="84000">11:20pm</option>
+																			<option value="84300">11:25pm</option>
+																			<option value="84600">11:30pm</option>
+																			<option value="84900">11:35pm</option>
+																			<option value="85200">11:40pm</option>
+																			<option value="85500">11:45pm</option>
+																			<option value="85800">11:50pm</option>
+																			<option value="86100">11:55pm</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-9 col-sm-8">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Service</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option value="84300">Hair cut</option>
+																			<option value="84600">Blow Spa</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-3 col-sm-4">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Duration</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option value="300">5min</option>
+																			<option value="600">10min</option>
+																			<option value="900">15min</option>
+																			<option value="1200">20min</option>
+																			<option value="1500">25min</option>
+																			<option value="1800">30min</option>
+																			<option value="2100">35min</option>
+																			<option value="2400">40min</option>
+																			<option value="2700">45min</option>
+																			<option value="3000">50min</option>
+																			<option value="3300">55min</option>
+																			<option value="3600">1h</option>
+																			<option value="3900">1h 5min</option>
+																			<option value="4200">1h 10min</option>
+																			<option value="4500">1h 15min</option>
+																			<option value="4800">1h 20min</option>
+																			<option value="5100">1h 25min</option>
+																			<option value="5400">1h 30min</option>
+																			<option value="5700">1h 35min</option>
+																			<option value="6000">1h 40min</option>
+																			<option value="6300">1h 45min</option>
+																			<option value="6600">1h 50min</option>
+																			<option value="6900">1h 55min</option>
+																			<option value="7200">2h</option>
+																			<option value="8100">2h 15min</option>
+																			<option value="9000">2h 30min</option>
+																			<option value="9900">2h 45min</option>
+																			<option value="10800">3h</option>
+																			<option value="11700">3h 15min</option>
+																			<option value="12600">3h 30min</option>
+																			<option value="13500">3h 45min</option>
+																			<option value="14400">4h</option>
+																			<option value="16200">4h 30min</option>
+																			<option value="18000">5h</option>
+																			<option value="19800">5h 30min</option>
+																			<option value="21600">6h</option>
+																			<option value="23400">6h 30min</option>
+																			<option value="25200">7h</option>
+																			<option value="27000">7h 30min</option>
+																			<option value="28800">8h</option>
+																			<option value="32400">9h</option>
+																			<option value="36000">10h</option>
+																			<option value="39600">11h</option>
+																			<option value="43200">12h</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-9 col-sm-8">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Staff</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option selected disabled value="">Select
+																				Staff
+																			</option>
+																			<option value="">Wendy Smith</option>
+																			<option value="">Adam Omar</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="StepProgress-item">
+												<div class="shadow-sm card bg-secondary">
+													<div class="card-body p-6">
+														<div class="row">
+															<div class="col-md-3 col-sm-4">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Start
+																		time</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option value="0">12:00am</option>
+																			<option value="300">12:05am</option>
+																			<option value="600">12:10am</option>
+																			<option value="900">12:15am</option>
+																			<option value="1200">12:20am</option>
+																			<option value="1500">12:25am</option>
+																			<option value="1800">12:30am</option>
+																			<option value="2100">12:35am</option>
+																			<option value="2400">12:40am</option>
+																			<option value="2700">12:45am</option>
+																			<option value="3000">12:50am</option>
+																			<option value="3300">12:55am</option>
+																			<option value="3600">1:00am</option>
+																			<option value="3900">1:05am</option>
+																			<option value="4200">1:10am</option>
+																			<option value="4500">1:15am</option>
+																			<option value="4800">1:20am</option>
+																			<option value="5100">1:25am</option>
+																			<option value="5400">1:30am</option>
+																			<option value="5700">1:35am</option>
+																			<option value="6000">1:40am</option>
+																			<option value="6300">1:45am</option>
+																			<option value="6600">1:50am</option>
+																			<option value="6900">1:55am</option>
+																			<option value="7200">2:00am</option>
+																			<option value="7500">2:05am</option>
+																			<option value="7800">2:10am</option>
+																			<option value="8100">2:15am</option>
+																			<option value="8400">2:20am</option>
+																			<option value="8700">2:25am</option>
+																			<option value="9000">2:30am</option>
+																			<option value="9300">2:35am</option>
+																			<option value="9600">2:40am</option>
+																			<option value="9900">2:45am</option>
+																			<option value="10200">2:50am</option>
+																			<option value="10500">2:55am</option>
+																			<option value="10800">3:00am</option>
+																			<option value="11100">3:05am</option>
+																			<option value="11400">3:10am</option>
+																			<option value="11700">3:15am</option>
+																			<option value="12000">3:20am</option>
+																			<option value="12300">3:25am</option>
+																			<option value="12600">3:30am</option>
+																			<option value="12900">3:35am</option>
+																			<option value="13200">3:40am</option>
+																			<option value="13500">3:45am</option>
+																			<option value="13800">3:50am</option>
+																			<option value="14100">3:55am</option>
+																			<option value="14400">4:00am</option>
+																			<option value="14700">4:05am</option>
+																			<option value="15000">4:10am</option>
+																			<option value="15300">4:15am</option>
+																			<option value="15600">4:20am</option>
+																			<option value="15900">4:25am</option>
+																			<option value="16200">4:30am</option>
+																			<option value="16500">4:35am</option>
+																			<option value="16800">4:40am</option>
+																			<option value="17100">4:45am</option>
+																			<option value="17400">4:50am</option>
+																			<option value="17700">4:55am</option>
+																			<option value="18000">5:00am</option>
+																			<option value="18300">5:05am</option>
+																			<option value="18600">5:10am</option>
+																			<option value="18900">5:15am</option>
+																			<option value="19200">5:20am</option>
+																			<option value="19500">5:25am</option>
+																			<option value="19800">5:30am</option>
+																			<option value="20100">5:35am</option>
+																			<option value="20400">5:40am</option>
+																			<option value="20700">5:45am</option>
+																			<option value="21000">5:50am</option>
+																			<option value="21300">5:55am</option>
+																			<option value="21600">6:00am</option>
+																			<option value="21900">6:05am</option>
+																			<option value="22200">6:10am</option>
+																			<option value="22500">6:15am</option>
+																			<option value="22800">6:20am</option>
+																			<option value="23100">6:25am</option>
+																			<option value="23400">6:30am</option>
+																			<option value="23700">6:35am</option>
+																			<option value="24000">6:40am</option>
+																			<option value="24300">6:45am</option>
+																			<option value="24600">6:50am</option>
+																			<option value="24900">6:55am</option>
+																			<option value="25200">7:00am</option>
+																			<option value="25500">7:05am</option>
+																			<option value="25800">7:10am</option>
+																			<option value="26100">7:15am</option>
+																			<option value="26400">7:20am</option>
+																			<option value="26700">7:25am</option>
+																			<option value="27000">7:30am</option>
+																			<option value="27300">7:35am</option>
+																			<option value="27600">7:40am</option>
+																			<option value="27900">7:45am</option>
+																			<option value="28200">7:50am</option>
+																			<option value="28500">7:55am</option>
+																			<option value="28800">8:00am</option>
+																			<option value="29100">8:05am</option>
+																			<option value="29400">8:10am</option>
+																			<option value="29700">8:15am</option>
+																			<option value="30000">8:20am</option>
+																			<option value="30300">8:25am</option>
+																			<option value="30600">8:30am</option>
+																			<option value="30900">8:35am</option>
+																			<option value="31200">8:40am</option>
+																			<option value="31500">8:45am</option>
+																			<option value="31800">8:50am</option>
+																			<option value="32100">8:55am</option>
+																			<option value="32400">9:00am</option>
+																			<option value="32700">9:05am</option>
+																			<option value="33000">9:10am</option>
+																			<option value="33300">9:15am</option>
+																			<option value="33600">9:20am</option>
+																			<option value="33900">9:25am</option>
+																			<option value="34200">9:30am</option>
+																			<option value="34500">9:35am</option>
+																			<option value="34800">9:40am</option>
+																			<option value="35100">9:45am</option>
+																			<option value="35400">9:50am</option>
+																			<option value="35700">9:55am</option>
+																			<option value="36000">10:00am</option>
+																			<option value="36300">10:05am</option>
+																			<option value="36600">10:10am</option>
+																			<option value="36900">10:15am</option>
+																			<option value="37200">10:20am</option>
+																			<option value="37500">10:25am</option>
+																			<option value="37800">10:30am</option>
+																			<option value="38100">10:35am</option>
+																			<option value="38400">10:40am</option>
+																			<option value="38700">10:45am</option>
+																			<option value="39000">10:50am</option>
+																			<option value="39300">10:55am</option>
+																			<option value="39600">11:00am</option>
+																			<option value="39900">11:05am</option>
+																			<option value="40200">11:10am</option>
+																			<option value="40500">11:15am</option>
+																			<option value="40800">11:20am</option>
+																			<option value="41100">11:25am</option>
+																			<option value="41400">11:30am</option>
+																			<option value="41700">11:35am</option>
+																			<option value="42000">11:40am</option>
+																			<option value="42300">11:45am</option>
+																			<option value="42600">11:50am</option>
+																			<option value="42900">11:55am</option>
+																			<option value="43200">12:00pm</option>
+																			<option value="43500">12:05pm</option>
+																			<option value="43800">12:10pm</option>
+																			<option value="44100">12:15pm</option>
+																			<option value="44400">12:20pm</option>
+																			<option value="44700">12:25pm</option>
+																			<option value="45000">12:30pm</option>
+																			<option value="45300">12:35pm</option>
+																			<option value="45600">12:40pm</option>
+																			<option value="45900">12:45pm</option>
+																			<option value="46200">12:50pm</option>
+																			<option value="46500">12:55pm</option>
+																			<option value="46800">1:00pm</option>
+																			<option value="47100">1:05pm</option>
+																			<option value="47400">1:10pm</option>
+																			<option value="47700">1:15pm</option>
+																			<option value="48000">1:20pm</option>
+																			<option value="48300">1:25pm</option>
+																			<option value="48600">1:30pm</option>
+																			<option value="48900">1:35pm</option>
+																			<option value="49200">1:40pm</option>
+																			<option value="49500">1:45pm</option>
+																			<option value="49800">1:50pm</option>
+																			<option value="50100">1:55pm</option>
+																			<option value="50400">2:00pm</option>
+																			<option value="50700">2:05pm</option>
+																			<option value="51000">2:10pm</option>
+																			<option value="51300">2:15pm</option>
+																			<option value="51600">2:20pm</option>
+																			<option value="51900">2:25pm</option>
+																			<option value="52200">2:30pm</option>
+																			<option value="52500">2:35pm</option>
+																			<option value="52800">2:40pm</option>
+																			<option value="53100">2:45pm</option>
+																			<option value="53400">2:50pm</option>
+																			<option value="53700">2:55pm</option>
+																			<option value="54000">3:00pm</option>
+																			<option value="54300">3:05pm</option>
+																			<option value="54600">3:10pm</option>
+																			<option value="54900">3:15pm</option>
+																			<option value="55200">3:20pm</option>
+																			<option value="55500">3:25pm</option>
+																			<option value="55800">3:30pm</option>
+																			<option value="56100">3:35pm</option>
+																			<option value="56400">3:40pm</option>
+																			<option value="56700">3:45pm</option>
+																			<option value="57000">3:50pm</option>
+																			<option value="57300">3:55pm</option>
+																			<option value="57600">4:00pm</option>
+																			<option value="57900">4:05pm</option>
+																			<option value="58200">4:10pm</option>
+																			<option value="58500">4:15pm</option>
+																			<option value="58800">4:20pm</option>
+																			<option value="59100">4:25pm</option>
+																			<option value="59400">4:30pm</option>
+																			<option value="59700">4:35pm</option>
+																			<option value="60000">4:40pm</option>
+																			<option value="60300">4:45pm</option>
+																			<option value="60600">4:50pm</option>
+																			<option value="60900">4:55pm</option>
+																			<option value="61200">5:00pm</option>
+																			<option value="61500">5:05pm</option>
+																			<option value="61800">5:10pm</option>
+																			<option value="62100">5:15pm</option>
+																			<option value="62400">5:20pm</option>
+																			<option value="62700">5:25pm</option>
+																			<option value="63000">5:30pm</option>
+																			<option value="63300">5:35pm</option>
+																			<option value="63600">5:40pm</option>
+																			<option value="63900">5:45pm</option>
+																			<option value="64200">5:50pm</option>
+																			<option value="64500">5:55pm</option>
+																			<option value="64800">6:00pm</option>
+																			<option value="65100">6:05pm</option>
+																			<option value="65400">6:10pm</option>
+																			<option value="65700">6:15pm</option>
+																			<option value="66000">6:20pm</option>
+																			<option value="66300">6:25pm</option>
+																			<option value="66600">6:30pm</option>
+																			<option value="66900">6:35pm</option>
+																			<option value="67200">6:40pm</option>
+																			<option value="67500">6:45pm</option>
+																			<option value="67800">6:50pm</option>
+																			<option value="68100">6:55pm</option>
+																			<option value="68400">7:00pm</option>
+																			<option value="68700">7:05pm</option>
+																			<option value="69000">7:10pm</option>
+																			<option value="69300">7:15pm</option>
+																			<option value="69600">7:20pm</option>
+																			<option value="69900">7:25pm</option>
+																			<option value="70200">7:30pm</option>
+																			<option value="70500">7:35pm</option>
+																			<option value="70800">7:40pm</option>
+																			<option value="71100">7:45pm</option>
+																			<option value="71400">7:50pm</option>
+																			<option value="71700">7:55pm</option>
+																			<option value="72000">8:00pm</option>
+																			<option value="72300">8:05pm</option>
+																			<option value="72600">8:10pm</option>
+																			<option value="72900">8:15pm</option>
+																			<option value="73200">8:20pm</option>
+																			<option value="73500">8:25pm</option>
+																			<option value="73800">8:30pm</option>
+																			<option value="74100">8:35pm</option>
+																			<option value="74400">8:40pm</option>
+																			<option value="74700">8:45pm</option>
+																			<option value="75000">8:50pm</option>
+																			<option value="75300">8:55pm</option>
+																			<option value="75600">9:00pm</option>
+																			<option value="75900">9:05pm</option>
+																			<option value="76200">9:10pm</option>
+																			<option value="76500">9:15pm</option>
+																			<option value="76800">9:20pm</option>
+																			<option value="77100">9:25pm</option>
+																			<option value="77400">9:30pm</option>
+																			<option value="77700">9:35pm</option>
+																			<option value="78000">9:40pm</option>
+																			<option value="78300">9:45pm</option>
+																			<option value="78600">9:50pm</option>
+																			<option value="78900">9:55pm</option>
+																			<option value="79200">10:00pm</option>
+																			<option value="79500">10:05pm</option>
+																			<option value="79800">10:10pm</option>
+																			<option value="80100">10:15pm</option>
+																			<option value="80400">10:20pm</option>
+																			<option value="80700">10:25pm</option>
+																			<option value="81000">10:30pm</option>
+																			<option value="81300">10:35pm</option>
+																			<option value="81600">10:40pm</option>
+																			<option value="81900">10:45pm</option>
+																			<option value="82200">10:50pm</option>
+																			<option value="82500">10:55pm</option>
+																			<option value="82800">11:00pm</option>
+																			<option value="83100">11:05pm</option>
+																			<option value="83400">11:10pm</option>
+																			<option value="83700">11:15pm</option>
+																			<option value="84000">11:20pm</option>
+																			<option value="84300">11:25pm</option>
+																			<option value="84600">11:30pm</option>
+																			<option value="84900">11:35pm</option>
+																			<option value="85200">11:40pm</option>
+																			<option value="85500">11:45pm</option>
+																			<option value="85800">11:50pm</option>
+																			<option value="86100">11:55pm</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-9 col-sm-8">
+																<div class="form-group">
+																	<label for="start_time"
+																		class="font-weight-bolder">Service</label>
+																	<div class="select-wrapper">
+																		<select class="form-control">
+																			<option class="d-flex">
+																				<ul>
+																					<li>
+																						sdas
+																					</li>
+																					<li>
+																						sdas
+																					</li>
+																				</ul>
+																			</option>
+																			<option>Blow Spa</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="row">
+											<div class="form-group w-100">
+												<label class="font-weight-bolder">Appointment notes</label>
+												<textarea class="form-control"
+													placeholder="Add an appointment note (visible to staff only)"
+													rows="4"></textarea>
+											</div>
+											<div class="form-group">
+												<div class="checkbox-list">
+													<label class="checkbox">
+														<input type="checkbox">
+														<span></span> Ask client to confirm appointment with card,
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="side-overlay">
+									<div id="dismiss">
+										<i class="la la-close" style="font-size: 18px;"></i>
+										<span
+											style="display: block; margin-top: 10px; color: #fff; font-size: 14px; text-transform: uppercase; font-weight: 700; text-shadow: 0 0 4px #67768c;">CLICK
+											TO CLOSE</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-4 p-0"
+							style="overflow-x: hidden;height:calc(100vh - 55px);overflow-y:scroll">
+							<div class="form-group p-6 border-y mb-0">
+								<div class="input-icon">
+									<input type="text" id="sidebarCollapse" class="form-control"
+										placeholder="Search...">
+									<span>
+										<i class="flaticon2-search-1 icon-md"></i>
+									</span>
+								</div>
+							</div>
+							<div class="customer-bottom">
+								<div class="customer-bottom-outer">
+									<div class="view-appoinment mb-2" style="height: calc(100vh - 270px);">
+										<!-- <div class="icon my-4 mx-auto" style="height: 48px;width:48px">
+											<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+												<g fill="none" fill-rule="evenodd">
+													<circle fill="#FBD74C" cx="22.5" cy="17.5" r="9.5"></circle>
+													<g transform="translate(2 2)" stroke="#101928"
+														stroke-linecap="round" stroke-linejoin="round"
+														stroke-width="1.5">
+														<path d="M34.642 34.642L44.5 44.5"></path>
+														<circle cx="20.5" cy="20.5" r="20"></circle>
+														<path
+															d="M29.5 30.5h-18v-2.242a3.999 3.999 0 012.866-3.838c1.594-.472 3.738-.92 6.134-.92 2.356 0 4.514.456 6.125.932a4.003 4.003 0 012.875 3.841V30.5z">
+														</path>
+														<circle cx="20.5" cy="15.5" r="4.5"></circle>
+													</g>
+												</g>
+											</svg>
+										</div> -->
+										<!-- <h4 class="px-10 text-center">
+											Use the search to add a client, or keep empty to save as walk-in.
+										</h4> -->
+										<div id="" class="bg-white active">
+											<div class="d-flex align-items-center border-bottom p-6 customer-data"
+												id="sidebarCollapse">
+												<div
+													class="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+													<div class="symbol-label rounded-circle"
+														style="background-image:url('assets/media/users/300_13.jpg')">
+													</div>
+												</div>
+												<div>
+													<a href="#"
+														class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Jayesh
+														G <span class="fonter-weight-bolder">*</span></a>
+													<div class="text-muted">+91 89048 52640 <span
+															class="font-weight-bolder">*</span></div>
+													<div class="text-muted">tjcloudtest@gmail.com
+													</div>
+												</div>
+												<i class="text-dark fa fa-chevron-right ml-auto"></i>
+											</div>
+											<div class="card-body p-1">
+												<div class="total-appoinment-data justify-content-around d-flex">
+													<div class="text-center w-100 data pt-1 p-42">
+														<h3 class="price font-weight-bolder text-center text-dark">4
+														</h3>
+														<p class="title text-muted">Total Booking</p>
+													</div>
+													<div class=" text-center w-100 data pt-1 p-2">
+														<h3 class="price font-weight-bolder text-center text-dark">CA
+															$30</h3>
+														<p class="title text-muted">Total Sales</p>
+													</div>
+												</div>
+												<ul class="nav nav-tabs nav-tabs-line nav-tabs-primary nav-tabs-line-2x"
+													role="tablist">
+													<li class="nav-item">
+														<a style="margin:0px;padding:0 6px;font-size: 12px;"
+															class="nav-link active" data-toggle="tab"
+															href="#appointments">Appointments
+															(2)</a>
+													</li>
+													<li class="nav-item">
+														<a style="margin:0px;padding:0 6px;font-size: 12px;"
+															class="nav-link" data-toggle="tab"
+															href="#consultationforms">Consultation
+															forms (0)</a>
+													</li>
+													<li class="nav-item">
+														<a style="margin:0px;padding:0 6px;font-size: 12px;"
+															class="nav-link" data-toggle="tab" href="#products">Products
+															(0)</a>
+													</li>
+													<li class="nav-item">
+														<a style="margin:0px;padding:0 6px;font-size: 12px;"
+															class="nav-link" data-toggle="tab" href="#invoices">Invoices
+															(2)</a>
+													</li>
+												</ul>
+												<div class="tab-content mt-5" id="myTabContent">
+													<div class="tab-pane fade show active" id="appointments"
+														role="tabpanel" aria-labelledby="appointments">
+														<div class="row">
+															<div class="card-body py-2 px-8">
+																<div class="client-apoinments-list mb-6">
+																	<div class="d-flex align-items-center flex-grow-1">
+																		<h6 class="font-weight-bolder text-dark">
+																			04 Jan</h6>
+																		<div
+																			class="d-flex flex-wrap align-items-center justify-content-between w-100">
+																			<div
+																				class="d-flex flex-column align-items-cente py-2 w-75">
+																				<h6 class="text-muted font-weight-bold">
+																					Tue
+																					10:00am <a class="text-blue"
+																						href="#">New</a>
+																				</h6>
+																				<a href="#"
+																					class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Hair
+																					Cuts</a>
+																				<span
+																					class="text-muted font-weight-bold">1h
+																					15min with <i
+																						class="fa fa-heart text-danger"></i>
+																					Adam
+																				</span>
+																			</div>
+																			<h6 class="font-weight-bolder py-4">
+																				CA
+																				$30</h6>
+																		</div>
+																	</div>
+																</div>
+																<div class="client-apoinments-list mb-6">
+																	<div class="d-flex align-items-center flex-grow-1">
+																		<h6 class="font-weight-bolder text-dark">
+																			04 Jan</h6>
+																		<div
+																			class="d-flex flex-wrap align-items-center justify-content-between w-100">
+																			<div
+																				class="d-flex flex-column align-items-cente py-2 w-75">
+																				<h6 class="text-muted font-weight-bold">
+																					Tue
+																					10:00am <a class="text-blue"
+																						href="#">New</a>
+																				</h6>
+																				<a href="#"
+																					class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Hair
+																					Cuts</a>
+																				<span
+																					class="text-muted font-weight-bold">1h
+																					15min with <i
+																						class="fa fa-heart text-danger"></i>
+																					Adam
+																				</span>
+																			</div>
+																			<h6 class="font-weight-bolder py-4">
+																				CA
+																				$30</h6>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="consultationforms" role="tabpanel"
+														aria-labelledby="consultationforms">
+														<h3>No consultation forms</h3>
+														<p>Create your first consultation form</p>
+
+													</div>
+													<div class="tab-pane fade" id="products" role="tabpanel"
+														aria-labelledby="products">
+														<h3>No product</h3>
+														<p>Create your first Product</p>
+
+													</div>
+													<div class="tab-pane fade" id="invoices" role="tabpanel"
+														aria-labelledby="invoices">
+														<div class="col-12 col-md-12">
+															<table class="table table-hover">
+																<thead>
+																	<tr>
+																		<th>Status</th>
+																		<th>Invoice#</th>
+																		<th>Invoice date</th>
+																		<th>Total</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>
+																			<span
+																				class="badge badge-pill badge-success">Completed</span>
+																		</td>
+																		<td><a class="text-blue"
+																				href="invoice_view.html">4</a>
+																		</td>
+																		<td>2 Jan 2021</td>
+																		<td>CA $3</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<span
+																				class="badge badge-pill badge-danger">Cancelled</span>
+																		</td>
+																		<td><a class="text-blue"
+																				href="invoice_view.html">5</a>
+																		</td>
+																		<td>5 Jan 2021</td>
+																		<td>CA $1</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="view-appoinment-footer border-top w-100 py-6">
+										<h6 class="font-weight-bolder text-center my-3">Total: Free (0min)</h6>
+										<div class="buttons d-flex justify-content-between">
+											<button class="btn btn-white w-100 mx-4">Express checkout</button>
+											<button class="btn btn-primary w-100 mx-4">Save appointment</button>
+										</div>
+									</div>
+								</div>
+								<div id="sidebar" class="bg-white">
+									<div class="card-body p-1">
+										<div class="border-bottom p-4 text-center text-blue">
+											<a href="create_client.html"><i class="text-blue fa fa-plus mr-2"></i>Add
+												new
+												client</a>
+										</div>
+										<div class="d-flex align-items-center border-bottom p-6 customer-data">
+											<div
+												class="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+												<div class="symbol-label rounded-circle"
+													style="background-image:url('assets/media/users/300_13.jpg')">
+												</div>
+											</div>
+											<div>
+												<h6 class="font-weight-bolder">
+													Jayesh
+													G</h6>
+												<div class="text-muted">tjcloudtest@gmail.com
+												</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center border-bottom p-6 customer-data">
+											<div
+												class="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+												<div class="symbol-label rounded-circle font-weight-bolder">
+													JD
+												</div>
+											</div>
+											<div>
+												<h6 class="font-weight-bolder">
+													John Doe</h6>
+												<div class="text-muted">john@gmail.com
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="repeatModal" tabindex="-1" role="dialog" aria-labelledby="repeatModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog  modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="row attached-fields m-0">
+							<div class="col-12 repeat-switch-column repeat_optin no-padding mb-5">
+								<label for="schedule_repeats" class="">Frequency</label>
+								<div class="select-wrapper">
+									<select class="form-control repeat-switch" id="schedule_repeats">
+										<option value="no-repeat">Doesn't repeat</option>
+										<option value="daily:1">Daily</option>
+										<option value="daily:2">Every 2 days</option>
+										<option value="daily:3">Every 3 days</option>
+										<option value="daily:4">Every 4 days</option>
+										<option value="daily:5">Every 5 days</option>
+										<option value="daily:6">Every 6 days</option>
+										<option value="daily:7">Every 7 days</option>
+										<option value="weekly:1">Weekly</option>
+										<option value="weekly:2">Every 2 weeks</option>
+										<option value="weekly:3">Every 3 weeks</option>
+										<option value="weekly:4">Every 4 weeks</option>
+										<option value="weekly:5">Every 5 weeks</option>
+										<option value="weekly:6">Every 6 weeks</option>
+										<option value="weekly:7">Every 7 weeks</option>
+										<option value="weekly:8">Every 8 weeks</option>
+										<option value="weekly:9">Every 9 weeks</option>
+										<option value="weekly:10">Every 10 weeks</option>
+										<option value="monthly:1">Monthly</option>
+										<option value="monthly:2">Every 2 months</option>
+										<option value="monthly:3">Every 3 months</option>
+										<option value="monthly:4">Every 4 months</option>
+										<option value="monthly:5">Every 5 months</option>
+										<option value="monthly:6">Every 6 months</option>
+										<option value="monthly:7">Every 7 months</option>
+										<option value="monthly:8">Every 8 months</option>
+										<option value="monthly:9">Every 9 months</option>
+										<option value="monthly:10">Every 10 months</option>
+										<option value="monthly:11">Every 11 months</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 repeat-container mx-0 hidden no-padding">
+								<div class="end-repeat-container mb-0 p-0">
+									<label class="">Ends</label>
+									<div class="select-wrapper">
+										<select class="form-control end-repeat" id="schedule_end_repeat"
+											name="repeatCount">
+											<option value="count:2">After 2 times</option>
+											<option value="count:3">After 3 times</option>
+											<option value="count:4">After 4 times</option>
+											<option value="count:5">After 5 times</option>
+											<option value="count:6">After 6 times</option>
+											<option value="count:7">After 7 times</option>
+											<option value="count:8">After 8 times</option>
+											<option value="count:9">After 9 times</option>
+											<option value="count:10">After 10 times</option>
+											<option value="count:11">After 11 times</option>
+											<option value="count:12">After 12 times</option>
+											<option value="count:13">After 13 times</option>
+											<option value="count:14">After 14 times</option>
+											<option value="count:15">After 15 times</option>
+											<option value="count:20">After 20 times</option>
+											<option value="count:25">After 25 times</option>
+											<option value="count:30">After 30 times</option>
+											<option value="specific_date">Specific date</option>
+											<option value="ongoing">Ongoing</option>
+										</select>
+									</div>
+								</div>
+								<div class="date-end-field hidden p-0">
+									<label class="">Selected date</label>
+									<input type="text" class="form-control" id="schedule_date_end" readonly=""
+										placeholder="End date" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-outline-secondary min-w-120px"
+							data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary min-w-120px">Apply changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="kt_scrolltop" class="scrolltop">
+			<span class="svg-icon">
+
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+					height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24" />
+						<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+						<path
+							d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+							fill="#000000" fill-rule="nonzero" />
+					</g>
+				</svg>
+
+			</span>
+		</div>
+
+
+
+		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+
+
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
+		<script src="assets/js/pages/crud/forms/widgets/bootstrap-select.js"></script>
+		<script src="assets/js/pages/widgets.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#dismiss, .side-overlay').on('click', function () {
+					$('#sidebar').removeClass('active');
+					$('.side-overlay').removeClass('active');
+				});
+
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').addClass('active');
+					$('.side-overlay').addClass('active');
+				});
+			});
+
+			var KTBootstrapSelect = function () {
+
+				// Private functions
+				var demos = function () {
+					// minimum setup
+					$('.kt-selectpicker').selectpicker();
+				}
+
+				return {
+					// public functions
+					init: function () {
+						demos();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function () {
+				KTBootstrapSelect.init();
+			});
+
+			// Class definition
+
+			var KTBootstrapDatepicker = function () {
+
+				var arrows;
+				if (KTUtil.isRTL()) {
+					arrows = {
+						leftArrow: '<i class="la la-angle-right"></i>',
+						rightArrow: '<i class="la la-angle-left"></i>'
+					}
+				} else {
+					arrows = {
+						leftArrow: '<i class="la la-angle-left"></i>',
+						rightArrow: '<i class="la la-angle-right"></i>'
+					}
+				}
+				var date = new Date();
+				var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+
+				// Private functions
+				var demos = function () {
+					// minimum setup
+					$('#new_appointment_date').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						orientation: "bottom left",
+						autoclose: true,
+						format: 'DD, dd M yyyy',
+						templates: arrows
+					});
+
+					$('#schedule_date_end').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						autoclose: true,
+						format: 'D, dd M',
+						orientation: "bottom left",
+						templates: arrows
+					});
+
+					$('#new_appointment_date, #schedule_date_end').datepicker('setDate', today);
+				}
+
+				return {
+					// public functions
+					init: function () {
+						demos();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function () {
+				KTBootstrapDatepicker.init();
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(function () {
+					var $select = $('#schedule_repeats');
+					$select.on('change', function () {
+						var value = $(this).val();
+						if (value == 'no-repeat') {
+							$('.repeat-container').addClass('hidden');
+							// $('.repeat_optin').removeClass('col-12');
+							// $('.repeat_optin').addClass('col-12');
+						} else {
+							$('.repeat-container').removeClass('hidden');
+							// $('.repeat_optin').addClass('col-12');
+							// $('.repeat_optin').removeClass('col-12');
+						}
+					});
+
+					var $endrepeat = $('#schedule_end_repeat');
+					$endrepeat.on('change', function () {
+						var value = $(this).val();
+						if (value == 'specific_date') {
+							$('.repeat-container').addClass('row');
+							$('.date-end-field').removeClass('hidden').addClass('col-6');
+							$('.end-repeat-container').removeClass('hidden').addClass('col-6');
+						} else {
+							$('.repeat-container').removeClass('row');
+							$('.date-end-field').addClass('hidden').removeClass('col-6');
+							$('.end-repeat-container').removeClass('col-6');
+						}
+					});
+				});
+			});
+		</script>
+</body>
+
+
+</html>

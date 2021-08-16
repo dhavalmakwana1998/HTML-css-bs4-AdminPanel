@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<base href="">
+	<meta charset="utf-8" />
+	<title>ScheduleDown </title>
+	<meta name="description"
+		content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<link href="assets/css/intlTelInput.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+
+<body id="kt_body" class="bg-white">
+	<div class="container-fluid p-0">
+		<div class="my-custom-body-wrapper">
+			<div class="my-custom-header">
+				<div class="p-4 d-flex justify-content-between border-bottom">
+					<h2 class="m-auto font-weight-bolder">New Staff</h2>
+					<p class="cursor-pointer m-0 px-10 " onclick="history.back();"><i
+							class="text-dark fa fa-times icon-lg"></i>
+					</p>
+				</div>
+			</div>
+			<div class="my-custom-body">
+				<div class="container">
+					<div class="modal-body container">
+						<ul class="nav nav-tabs nav-tabs-line nav-tabs-primary  nav-tabs-line-3x">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#details">Details</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#services">Services</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#commission">Commission</a>
+							</li>
+						</ul>
+						<div class="tab-content mt-5" id="myTabContent">
+							<div class="tab-pane fade show active" id="details" role="tabpanel"
+								aria-labelledby="kt_tab_pane_2">
+								<div class="row">
+									<div class="col-12 col-md-6">
+										<div class="d-flex justify-content-between">
+											<div class="form-group mr-2 w-100">
+												<label>First Name
+													<span class="text-danger">*</span></label>
+												<input type="tex" class="form-control" placeholder="John">
+											</div>
+											<div class="form-group ml-2 w-100">
+												<label>Last Name
+													<span class="text-danger">*</span></label>
+												<input type="tex" class="form-control" placeholder="Doe">
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Mobile Number
+												<span class="text-danger">*</span>
+											</label>
+											<input type="tel" class="form-control" placeholder="" id="telephone">
+										</div>
+										<div class="form-group">
+											<label>Email
+												<span class="text-danger">*</span>
+											</label>
+											<input type="email" class="form-control" placeholder="test@#gmail.com">
+										</div>
+										<div class="form-group font-weight-bold m-0">
+											<label>User Permission
+												<span class="text-dark"><i class="fa fa-question-circle"
+														data-toggle="tooltip" data-placement="bottom"
+														title="When saved, this staff member will receive email instructions to setup their own login password"
+														data-original-title="When saved, this staff member will receive email instructions to setup their own login password"
+														class="dark-tooltip"></i></span>
+											</label>
+											<select class="form-control" id="select-location">
+												<option selected="">No Access</option>
+												<option value="low">Low</option>
+												<option value="basic">Basic</option>
+												<option value="medium">Low</option>
+												<option value="high">High</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<div class="mt-4 switch switch-icon switch-primary"
+												style="line-height: 33px;">
+												<label class="d-flex align-item-center">
+													<input type="checkbox" checked="checked" name="select">
+													<span></span>
+													ENABLE APPOINTMENT BOOKINGS<i class="fa fa-question-circle"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="When saved, this staff member will receive email instructions to setup their own login password"
+														style="line-height: 33px;"></i>
+												</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="form-label">Appoinment Color
+												<span class="text-dark"><i class="fa fa-question-circle"
+														data-toggle="tooltip" data-placement="bottom"
+														title="See your Calendar Settings page under Setup to set how colors are displayed on the calendar"
+														data-original-title="See your Calendar Settings page under Setup to set how colors are displayed on the calendar"
+														class="dark-tooltip"></i></span>
+											</label>
+											<div class="radio-inline flex-wrap appoinment-radio max-w-100">
+												<label class="radio radio-accent pink">
+													<input type="radio" checked value="pink" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent purple">
+													<input type="radio" value="purple" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent indigo">
+													<input type="radio" value="indigo" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent blue">
+													<input type="radio" value="blue" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent teal">
+													<input type="radio" value="teal" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent green">
+													<input type="radio" value="green" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent lime">
+													<input type="radio" value="lime" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent lime">
+													<input type="radio" value="lime" name="color" />
+													<span></span>
+												</label>
+												<label class="radio radio-accent yellow">
+													<input type="radio" value="yellow" name="color" />
+													<span></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-6">
+										<div class="form-group mr-2 w-100">
+											<label>Staff Title
+												<span class="text-danger">*</span></label>
+											<input type="tex" class="form-control" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="exampleTextarea">Notes
+												<span class="text-danger">*</span></label>
+											<textarea class="form-control"
+												placeholder="Add private notes viewable in staff settings only (optional)"
+												id="exampleTextarea" rows="6"></textarea>
+										</div>
+										<div class="d-flex justify-content-between">
+											<div class="form-group mr-2 w-100">
+												<label for="kt_datepicker_1">Employement Start Date</label>
+												<input type="text" class="form-control kt_date" id="kt_datepicker_1"
+													readonly="readonly" placeholder="Select Start date">
+											</div>
+											<div class="form-group ml-2 w-100">
+												<label for="kt_datepicker_2">Employement End Date</label>
+												<input type="text" class="form-control kt_date" id="kt_datepicker_2"
+													readonly="readonly" placeholder="Select End date">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+								<p>Assign services this staff member can perform.</p>
+								<div class="staf-member-services">
+									<ul>
+										<li class="mb-6"><label class="checkbox">
+												<input type="checkbox" onClick="toggle(this)" class="form-control">
+												<span class="mr-4"></span>Select All
+											</label></li><br />
+										<li><label class="checkbox">
+												<input type="checkbox" name="services" class="form-control">
+												<span class="mr-4"></span>Hair Cuts
+											</label></li>
+										<li><label class="checkbox">
+												<input type="checkbox" name="services" class="form-control">
+												<span class="mr-4"></span>Haircut
+											</label>
+										</li>
+										<li><label class="checkbox">
+												<input type="checkbox" name="services" class="form-control">
+												<span class="mr-4"></span>Blow Dry
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="commission" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+								<div class="col-12 col-md-12">
+									<div class="col-12 col-md-6">
+										<div class="d-flex justify-content-between">
+											<div class="form-group w-100">
+												<label>Service Commission</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text rounded-0">%</span>
+													</div>
+													<input type="text" class="form-control rounded-0">
+												</div>
+											</div>
+											<div class="form-group w-100">
+												<label>Product Commission</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text rounded-0">%</span>
+													</div>
+													<input type="text" class="form-control rounded-0">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-6">
+										<div class="d-flex justify-content-between">
+											<div class="form-group w-100">
+												<label>Voucher Commission</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text rounded-0">%</span>
+													</div>
+													<input type=" text" class="form-control rounded-0">
+												</div>
+											</div>
+											<div class="form-group w-100">
+												<label>Paid Plan Commission</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text rounded-0">%</span>
+													</div>
+													<input type=" text" class="form-control rounded-0">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="m-0">
+			<div class="my-custom-footer container">
+				<div class="text-right my-4 d-flex justify-content-between">
+					<button type="button" class="btn btn-danger font-weight-bold">Delete</button>
+					<div class="ml-auto">
+						<button type=" button" class="mr-4 btn btn-outline-secondary font-weight-bold"
+							onclick="history.back();">Cancel</button>
+						<button type="button" class="btn btn-primary font-weight-bold">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="kt_scrolltop" class="scrolltop">
+			<span class="svg-icon">
+
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+					height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24" />
+						<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+						<path
+							d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+							fill="#000000" fill-rule="nonzero" />
+					</g>
+				</svg>
+
+			</span>
+		</div>
+
+
+
+		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+
+
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
+		<script src="assets/js/pages/widgets.js"></script>
+
+
+		<script src="assets/js/intlTelInput.js"></script>
+
+		<script>
+			// jQuery 
+			$("#telephone").intlTelInput({
+				// whether or not to allow the dropdown
+				allowDropdown: true,
+
+				// if there is just a dial code in the input: remove it on blur, and re-add it on focus
+				autoHideDialCode: true,
+
+				// add a placeholder in the input with an example number for the selected country
+				autoPlaceholder: "polite",
+
+				// modify the auto placeholder
+				customPlaceholder: null,
+
+				// append menu to specified element
+				dropdownContainer: null,
+
+				// don't display these countries
+				excludeCountries: [],
+
+				// format the input value during initialisation and on setNumber
+				formatOnDisplay: true,
+
+				// geoIp lookup function
+				geoIpLookup: null,
+
+				// inject a hidden input with this name, and on submit, populate it with the result of getNumber
+				hiddenInput: "",
+
+				// initial country
+				initialCountry: "",
+
+				// localized country names e.g. { 'de': 'Deutschland' }
+				localizedCountries: null,
+
+				// don't insert international dial codes
+				nationalMode: true,
+
+				// display only these countries
+				onlyCountries: [],
+
+				// number type to use for placeholders
+				placeholderNumberType: "MOBILE",
+
+				// the countries at the top of the list. defaults to united states and united kingdom
+				preferredCountries: ["in"],
+
+				// display the country dial code next to the selected flag so it's not part of the typed number
+				separateDialCode: false,
+
+				// specify the path to the libphonenumber script to enable validation/formatting
+				utilsScript: ""
+			});
+		</script>
+		<script>
+			// jQuery 
+			$("#mobileNumber").intlTelInput({
+				// whether or not to allow the dropdown
+				allowDropdown: true,
+
+				// if there is just a dial code in the input: remove it on blur, and re-add it on focus
+				autoHideDialCode: true,
+
+				// add a placeholder in the input with an example number for the selected country
+				autoPlaceholder: "polite",
+
+				// modify the auto placeholder
+				customPlaceholder: null,
+
+				// append menu to specified element
+				dropdownContainer: null,
+
+				// don't display these countries
+				excludeCountries: [],
+
+				// format the input value during initialisation and on setNumber
+				formatOnDisplay: true,
+
+				// geoIp lookup function
+				geoIpLookup: null,
+
+				// inject a hidden input with this name, and on submit, populate it with the result of getNumber
+				hiddenInput: "",
+
+				// initial country
+				initialCountry: "",
+
+				// localized country names e.g. { 'de': 'Deutschland' }
+				localizedCountries: null,
+
+				// don't insert international dial codes
+				nationalMode: true,
+
+				// display only these countries
+				onlyCountries: [],
+
+				// number type to use for placeholders
+				placeholderNumberType: "MOBILE",
+
+				// the countries at the top of the list. defaults to united states and united kingdom
+				preferredCountries: ["in"],
+
+				// display the country dial code next to the selected flag so it's not part of the typed number
+				separateDialCode: false,
+
+				// specify the path to the libphonenumber script to enable validation/formatting
+				utilsScript: ""
+			});
+		</script>
+
+
+		<script>
+			$("#postalAddress").hide();
+			$("#physicalAddress").addClass("col-md-6");
+			$("#isPostalSame").click(function () {
+				if ($(this).is(":checked")) {
+					$("#postalAddress").show();
+					$("#physicalAddress").removeClass("col-md-6");
+					$("#physicalAddress").addClass("col-md-3");
+
+				} else {
+					$("#postalAddress").hide();
+					$("#physicalAddress").addClass("col-md-6");
+					$("#physicalAddress").removeClass("col-md-3");
+				}
+			});
+		</script>
+</body>
+
+
+
+</html>

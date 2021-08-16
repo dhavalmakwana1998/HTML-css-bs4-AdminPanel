@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<base href="">
+	<meta charset="utf-8" />
+	<title>Admin Design </title>
+	<meta name="description"
+		content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link href="assets/css/intlTelInput.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+</head>
+
+
+
+
+<body id="kt_body" class="bg-white">
+	<div class="container-fluid p-0">
+		<div class="my-custom-body-wrapper">
+			<div class="my-custom-header">
+				<div class="p-4 d-flex justify-content-between align-items-center border-bottom">
+					<span class="d-flex">
+						<p class="cursor-pointer m-0 px-6" onclick="history.back();"><i
+								class="text-dark fa fa-times icon-lg"></i>
+						</p>
+					</span>
+					<h1 class="font-weight-bolder">Thank You Notification</h1>
+					<button class="btn btn-lg btn-primary next-step">Save</button>
+				</div>
+			</div>
+			<div class="my-custom-body">
+				<div class="container-fluid bg-content">
+					<div class="row">
+						<div class="col-12 col-md-4 p-0 bg-content" style="height:calc(100vh - 80px);overflow-y:scroll">
+							<div class="p-4">
+								<h6 class="text-dark-50">
+									This notification automatically sends to clients when their appointment start time
+									is changed.
+								</h6>
+								<div class="form-group">
+									<div class="checkbox-list mt-8">
+										<label class="checkbox font-weight-bolder">
+											<input checked="" onclick="isSpecificEmail()" id="specificEmailCheckbox"
+												type="checkbox">
+											<span></span> Enable thank you messages
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox-list mt-8">
+										<label class="checkbox font-weight-bolder">
+											<input checked="" onclick="isSpecificEmail()" id="specificEmailCheckbox"
+												type="checkbox">
+											<span></span> Display service prices and invoice link on email
+										</label>
+									</div>
+								</div>
+								<h3 class="font-weight-bolder">Important info</h3>
+								<h6 class="text-dark-50">
+									You can optionally include extra details for clients about their visit, this info is
+									only displayed in emails
+								</h6>
+								<div class="form-group">
+									<label class="font-weight-bolder">Important info (optional)</label>
+									<textarea rows="4" class="form-control"
+										placeholder="e.g. Parking is available on the street"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-8 p-0 bg-white" style="height:calc(100vh - 80px);overflow-y:scroll">
+							<div class="d-flex flex-column align-items-center p-10">
+								<ul class="nav nav-pills round-nav" id="myTab1" role="tablist">
+									<li class="nav-item font-weight-bolder">
+										<a class="nav-link active" id="home-tab-1" data-toggle="tab" href="#email">
+											<span class="nav-text">Email</span>
+										</a>
+									</li>
+									<li class="nav-item font-weight-bolder">
+										<a class="nav-link" id="profile-tab-1" data-toggle="tab"
+											href="#app-notification" aria-controls="profile">
+											<span class="nav-text">App Notification</span>
+										</a>
+									</li>
+								</ul>
+								<div class="p-6">
+									<div class="card m-auto">
+										<div class="card-body">
+											<h3 class="text-center">Message Preview</h3>
+											<div class="smartphone">
+												<div class="content pt-0">
+													<div class="tab-content" id="myTabContent1">
+														<div class="tab-pane fade active show" id="email"
+															role="tabpanel" aria-labelledby="home-tab-1">
+															<div class="card-body bg-dark text-white">
+																<div class="message">
+																	<h3>Tahnk you for visiting adam!</h3>
+																	<span
+																		class="mb-3 badge badge-pill badge-success">Completed</span>
+																	<h4>Tuesday, 5 Jan at 10:00am</h4>
+																	<div class="addr">
+																		<h4>Gym Area</h4>
+																		<p class="p-0 m-0 text-muted">Canada Way,
+																			Burnby, British</p>
+																		<p class="p-0 m-0 text-muted">columbia, CA</p>
+																		<p class="p-0 m-0 text-muted">Booking
+																			ref:2016CD09</p>
+																	</div>
+																	<div
+																		class="my-4 icons justify-content-around d-flex">
+																		<div class="btn btn-info icon text-center">
+																			<i class="text-white fas fa-star"></i>
+																			Review
+																		</div>
+																		<div class="btn btn-success icon text-center">
+																			<i
+																				class="text-white far fa-calendar-alt"></i>
+																			Re-Book
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="bg-secondary p-3">
+																<div class="d-flex justify-content-between">
+																	<div>
+																		<h3>Hair Cuts</h3>
+																		<p class="m-0">1h 15min wiht Adam</p>
+																	</div>
+																	<h3 class="font-weight-bolder">CA$30</h3>
+																</div>
+																<hr>
+																<div class="total d-flex justify-content-between">
+																	<h3 class="font-weight-bolder">Total</h3>
+																	<h3 class="font-weight-bolder">CA $30</h3>
+																</div>
+																<hr>
+																<div class="total d-flex justify-content-between">
+																	<h6 class="">Paid by Card</h6>
+																	<h6 class="">
+																		<img alt="card-img"
+																			src="./assets/images/mastercard.png" />
+																		**** 1234
+																	</h6>
+																</div>
+															</div>
+														</div>
+														<div class="tab-pane fade" id="app-notification" role="tabpanel"
+															aria-labelledby="profile-tab-1">
+															<div class="card-body shadow-sm bg-white rounded m-4">
+																<div class="date">24 dec</div>
+																<div class="message">
+																	<div class="d-flex justify-content-between">
+																		<div class="d-flex align-items-center">
+																			<div style="height: 25px;width: 25px;">
+																				<svg viewBox="0 0 24 24"
+																					xmlns="http://www.w3.org/2000/svg">
+																					<g fill="none" fill-rule="evenodd">
+																						<rect fill="#101928" width="24"
+																							height="24" rx="5.85">
+																						</rect>
+																						<path fill="#FFF"
+																							d="M9 7h7v2H9zM9 12h7v2H9zM9 17h7v2H9z">
+																						</path>
+																					</g>
+																				</svg>
+																			</div>
+																			<h5
+																				class="ml-2 mb-0 font-weight-bold text-uppercase">
+																				Admin Design
+																			</h5>
+																		</div>
+																		<div>
+																			<p class="">Now</p>
+																		</div>
+																	</div>
+																	<p class="font-weight-bolder">
+																		Adam, how was your visit today? ☝️⭐
+																	</p>
+																	<h6>
+																		Tap to rate your experience at Gym area
+																	</h6>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div id="kt_scrolltop" class="scrolltop">
+		<span class="svg-icon">
+
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+				height="24px" viewBox="0 0 24 24" version="1.1">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<polygon points="0 0 24 0 24 24 0 24" />
+					<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+					<path
+						d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+						fill="#000000" fill-rule="nonzero" />
+				</g>
+			</svg>
+
+		</span>
+	</div>
+
+	<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
+	<script src="assets/plugins/global/plugins.bundle.js"></script>
+	<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+	<script src="assets/js/scripts.bundle.js"></script>
+
+
+	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
+	<script src="assets/js/pages/widgets.js"></script>
+
+	<script src="assets/js/pages/crud/file-upload/image-input.js"></script>
+
+
+	<script>
+		var currentTab = 0; // Current tab is set to be the first tab (0)
+		showTab(currentTab); // Display the current tab
+
+		function showTab(n) {
+			// This function will display the specified tab of the form...
+			var tab = document.getElementsByClassName("add-voucher-tab");
+			tab[n].style.display = "block";
+			if (n == (tab.length - 1)) {
+				$(".next-step").text("Save");
+				$(".previous").show();
+				$("#editProImgOne").show();
+				$("#editProImgTwo").hide();
+				$(".steps").text("3");
+				$(".pro-desc").text("Upload photos showing your place of business and services offered, logos and stock images are not suitable. At least one photo is required, drag and drop photos to rearrange the order and tap on photos to edit.");
+			} else {
+				$(".previous").hide();
+				$(".next-step").text("Next Step");
+			}
+			if (n == 0) {
+				$("#editProImgOne").show();
+				$("#editProImgTwo").hide();
+				$(".steps").text("1");
+				$(".pro-desc").text("Add key details about your business to display on your online booking profile. Explain in simple terms what makes your business great, and the overall types of services offered.")
+			} else if (n == 1) {
+				$(".previous").show();
+				$("#editProImgOne").hide();
+				$("#editProImgTwo").show();
+				$(".steps").text("2");
+				$(".pro-desc").text("Setup standard opening hours to display on your online booking profile, the hours selected here will not impact your actual calendar availability.")
+			}
+		}
+
+		function nextPrev(n) {
+			// This function will figure out which tab to display
+			var tab = document.getElementsByClassName("add-voucher-tab");
+			// Hide the current tab:
+			tab[currentTab].style.display = "none";
+			// Increase or decrease the current tab by 1:
+			currentTab = currentTab + n;
+			// if you have reached the end of the tab
+			// Otherwise, display the correct tab:
+			showTab(currentTab);
+		}
+	</script>
+</body>
+
+</html>

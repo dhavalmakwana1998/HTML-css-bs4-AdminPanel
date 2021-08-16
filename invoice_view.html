@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<base href="">
+	<meta charset="utf-8" />
+	<title>Admin Design </title>
+	<meta name="description"
+		content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<style type="text/css">
+		body {
+			height: 100vh;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+
+
+
+<body id="kt_body" class="bg-white">
+	<div class="container-fluid invoice-view p-0">
+		<div class="p-4 d-flex justify-content-between" id="title-header">
+			<h2 class="m-auto font-weight-bolder">View Invoice</h2>
+			<h1 class="cursor-pointer" onclick="history.back();">&times;</h1>
+		</div>
+		<hr class="m-0" />
+		<div class="container-fluid p-0">
+			<div class="row m-0">
+				<div class="col-12 col-sm-8 p-0 bg-light-secondary content-height"
+					style="overflow-y: scroll; position: relative;">
+					<div class="container p-12 position-relative">
+						<div class="d-flex flex-column align-items-center p-10">
+							<ul class="nav nav-pills round-nav" id="myTab1" role="tablist">
+								<li class="nav-item font-weight-bolder">
+									<a class="nav-link active" id="home-tab-1" data-toggle="tab" href="#voucher">
+										<span class="nav-text">Voucher</span>
+									</a>
+								</li>
+								<li class="nav-item font-weight-bolder">
+									<a class="nav-link" id="profile-tab-1" data-toggle="tab" href="#invoice"
+										aria-controls="profile">
+										<span class="nav-text">Invoice</span>
+									</a>
+								</li>
+							</ul>
+							<div class="tab-content mt-5" id="myTabContent1">
+								<div class="tab-pane fade active show" id="voucher" role="tabpanel"
+									aria-labelledby="home-tab-1">
+									<div class="card mb-4 border-0 rounded">
+										<div class="p-10 text-center text-white justify-content-center bgi-size-cover bgi-no-repeat"
+											style="background-image:url(assets/media/bg/bg-6.jpg);color: #7d3be6;">
+											<div class="p-4 text-center">
+												<img alt=voucher-thumb class="rounded mb-4"
+													src="./assets/images/thumb.jpg" width="80px" height="80px" />
+												<h3 class="font-weight-bold">Gym area</h3>
+												<h5 class="text-grey">Canada Way, Burnaby, British Columbia</h5>
+											</div>
+											<div class="border-bottom w-100 opacity-20"></div>
+											<div class="my-8 vouchers-value">
+												<p class="font-weight-bolder mb-0 font-size-lg">Voucher Value</p>
+												<h1 class="font-weight-bolder">CA $32</h1>
+											</div>
+											<div class="border-bottom w-100 opacity-20"></div>
+											<div class="my-8 vouchers-bottom">
+												<p class="mb-4 font-size-lg">Voucher Code : <span
+														class="font-weight-bolder font-size-lg">VGYWWJMP</span></p>
+												<p class="mb-1 font-weight-bold font-size-lg">Redeem on <span
+														data-toggle="modal" data-target="#allServicesModal"
+														class="font-weight-bolder cursor-pointer">all
+														services</span> <i class="fa fa-chevron-right icon-sm"></i></p>
+												<p class="mb-1 font-weight-bold font-size-lg">Valid until 2 Jul 2021</p>
+												<p class="mb-1 font-weight-bold font-size-lg">For multiple-use</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="profile-tab-1">
+									<div class="card">
+										<div class="card-header p-4 text-center">
+											<h3>Invoice #4</h3>
+											<p class="text-muted">Saturday, 2 Jan 2021</p>
+										</div>
+										<div class="card-body">
+											<div
+												class="my-2 border-bottom order-detail d-flex align-items-center justify-content-between">
+												<div class="detail mr-4">
+													<p class="mb-0 text-muted">1 item</p>
+													<p class="mb-0 text-dark font-size-lg">$32 - asdasd</p>
+													<p class="mb-0 text-muted">Code: VGYWWJMP, expires on 02 Jul 2021,
+													</p>
+													<p class="mb-0 text-muted">Adam Omar</p>
+												</div>
+												<div class="price align-self-end">
+													<h4>Ca $3</h4>
+												</div>
+											</div>
+											<div
+												class="my-2 border-bottom order-detail d-flex align-items-center justify-content-between">
+												<div class="detail mr-4">
+													<p class="mb-0 text-muted">1 item</p>
+													<p class="mb-0 text-dark font-size-lg">$32 - asdasd</p>
+													<p class="mb-0 text-muted">Code: VGYWWJMP, expires on 02 Jul 2021,
+													</p>
+													<p class="mb-0 text-muted">Adam Omar</p>
+												</div>
+												<div class="price align-self-end">
+													<h4>Ca $3</h4>
+												</div>
+											</div>
+											<div
+												class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+												<p class="mb-0 text-dark font-size-lg">Subtotal</p>
+												<h4>Ca $6</h4>
+											</div>
+											<div
+												class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+												<p class="mb-0 text-dark font-size-lg">Total</p>
+												<h4>Ca $6</h4>
+											</div>
+											<div
+												class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+												<span>
+													<p class="mb-0 text-dark font-size-lg">Cash</p>
+													<p class="mb-0 text-muted font-size-lg">Saturday, 2 Jan 2021 at
+														7:24pm
+													</p>
+												</span>
+												<h4>Ca $0</h4>
+											</div>
+											<div
+												class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+												<p class="mb-0 text-dark font-size-lg">Balance</p>
+												<h4>Ca $0</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="side-overlay">
+						<div id="dismiss">
+							<i class="la la-close" style="font-size: 18px;"></i>
+							<span
+								style="display: block; margin-top: 10px; color: #fff; font-size: 14px; text-transform: uppercase; font-weight: 700; text-shadow: 0 0 4px #67768c;">CLICK
+								TO CLOSE</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-4 p-0 content-height">
+					<div class="d-flex align-items-center border-bottom p-6 customer-data" id="sidebarCollapse">
+						<div class="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+							<div class="symbol-label rounded-circle"
+								style="background-image:url('assets/media/users/300_13.jpg')">
+							</div>
+						</div>
+						<div>
+							<a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Jayesh
+								G <span class="fonter-weight-bolder">*</span></a>
+							<div class="text-muted">+91 89048 52640 <span class="font-weight-bolder">*</span></div>
+							<div class="text-muted">tjcloudtest@gmail.com
+							</div>
+						</div>
+						<i class="text-dark fa fa-chevron-right ml-auto"></i>
+					</div>
+					<div class="customer-bottom" style="overflow: hidden scroll;">
+						<div class="customer-bottom-outer">
+							<div class="view-appoinment-content mb-2">
+								<div class="px-20 py-8 text-center">
+									<i class="far fa-check-circle" style="color:rgb(14, 230, 140);font-size: 82px;"></i>
+								</div>
+								<h2 class="font-weight-bolder px-4 text-center">Completed</h2>
+								<h4 class="px-10">Full payment received on Saturday, 2 Jan 2021
+									at
+									Gym area by Adam
+									Omar
+								</h4>
+								<div class="px-4 mt-18">
+									<label class="font-weight-bolder">Send Invoice</label>
+									<div class="mb-0 form-group w-100 d-flex">
+										<input type="email" class="form-control form-control-lg mr-4"
+											value="tjcloudtest@gmail.com" placeholder="Enter email">
+										<button class="py-2 px-4 btn btn-lg btn-primary">Send</button>
+									</div>
+								</div>
+							</div>
+							<div class="view-appoinment-footer border-top w-100 py-6">
+								<h5 class="text-center font-weight-bolder mb-4">Total: CA $30 (1h 5min)</h5>
+								<div class="buttons d-flex justify-content-between">
+									<div class="btn-group dropup w-100 mx-4">
+										<button type="button" class="btn btn-white dropdown-toggle"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											More Option
+										</button>
+										<div class="dropdown-menu dropdown-menu-sm dropdown-menu-center">
+
+											<ul class="text-center navi flex-column navi-hover py-2">
+												<li class="navi-item">
+													<a href="#" class="navi-link">
+														<span class="navi-text">Edit Appoinment</span>
+													</a>
+												</li>
+												<li class="navi-item">
+													<a href="#" class="navi-link">
+														<span class="navi-text">Download</span>
+													</a>
+												</li>
+												<li class="navi-item">
+													<a href="javascript:void()" class="navi-link">
+														<span class="navi-text text-danger">Refund</span>
+													</a>
+												</li>
+												<li class="navi-item">
+													<a href="#" class="navi-link">
+														<span class="navi-text text-danger">Void</span>
+													</a>
+												</li>
+												<li class="navi-item">
+													<a href="#" class="navi-link">
+														<span class="navi-text">Email Voucher</span>
+													</a>
+												</li>
+												<li class="navi-item">
+													<a href="#" class="navi-link">
+														<span class="navi-text">Print Voucher</span>
+													</a>
+												</li>
+											</ul>
+
+										</div>
+									</div>
+									<button onclick="history.back();" class="btn btn-lh btn-primary w-100 mx-4">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="sidebar" class="bg-white">
+							<div class="card-body p-1">
+								<div class="total-appoinment-data justify-content-around d-flex">
+									<div class="text-center w-100 data pt-1 p-42">
+										<h3 class="price font-weight-bolder text-center text-dark">4</h3>
+										<p class="title text-muted">Total Booking</p>
+									</div>
+									<div class=" text-center w-100 data pt-1 p-2">
+										<h3 class="price font-weight-bolder text-center text-dark">CA $30</h3>
+										<p class="title text-muted">Total Sales</p>
+									</div>
+								</div>
+								<ul class="nav nav-tabs nav-tabs-line nav-tabs-primary nav-tabs-line-2x" role="tablist">
+									<li class="nav-item">
+										<a style="margin:0px;padding:0 6px;font-size: 12px;" class="nav-link active"
+											data-toggle="tab" href="#appointments">Appointments
+											(2)</a>
+									</li>
+									<li class="nav-item">
+										<a style="margin:0px;padding:0 6px;font-size: 12px;" class="nav-link"
+											data-toggle="tab" href="#consultationforms">Consultation
+											forms (0)</a>
+									</li>
+									<li class="nav-item">
+										<a style="margin:0px;padding:0 6px;font-size: 12px;" class="nav-link"
+											data-toggle="tab" href="#products">Products (0)</a>
+									</li>
+									<li class="nav-item">
+										<a style="margin:0px;padding:0 6px;font-size: 12px;" class="nav-link"
+											data-toggle="tab" href="#invoices">Invoices (2)</a>
+									</li>
+								</ul>
+								<div class="tab-content mt-5" id="myTabContent">
+									<div class="tab-pane fade show active" id="appointments" role="tabpanel"
+										aria-labelledby="appointments">
+										<div class="row">
+											<div class="card-body py-2 px-8">
+												<div class="client-apoinments-list mb-6">
+													<div class="d-flex align-items-center flex-grow-1">
+														<h6 class="font-weight-bolder text-dark">
+															04 Jan</h6>
+														<div
+															class="d-flex flex-wrap align-items-center justify-content-between w-100">
+															<div class="d-flex flex-column align-items-cente py-2 w-75">
+																<h6 class="text-muted font-weight-bold">
+																	Tue
+																	10:00am <a class="text-blue" href="#">New</a>
+																</h6>
+																<a href="#"
+																	class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Hair
+																	Cuts</a>
+																<span class="text-muted font-weight-bold">1h
+																	15min with <i class="fa fa-heart text-danger"></i>
+																	Adam
+																</span>
+															</div>
+															<h6 class="font-weight-bolder py-4">
+																CA
+																$30</h6>
+														</div>
+													</div>
+												</div>
+												<div class="client-apoinments-list mb-6">
+													<div class="d-flex align-items-center flex-grow-1">
+														<h6 class="font-weight-bolder text-dark">
+															04 Jan</h6>
+														<div
+															class="d-flex flex-wrap align-items-center justify-content-between w-100">
+															<div class="d-flex flex-column align-items-cente py-2 w-75">
+																<h6 class="text-muted font-weight-bold">
+																	Tue
+																	10:00am <a class="text-blue" href="#">New</a>
+																</h6>
+																<a href="#"
+																	class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Hair
+																	Cuts</a>
+																<span class="text-muted font-weight-bold">1h
+																	15min with <i class="fa fa-heart text-danger"></i>
+																	Adam
+																</span>
+															</div>
+															<h6 class="font-weight-bolder py-4">
+																CA
+																$30</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="consultationforms" role="tabpanel"
+										aria-labelledby="consultationforms">
+										<h3>No consultation forms</h3>
+										<p>Create your first consultation form</p>
+
+									</div>
+									<div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products">
+										<h3>No product</h3>
+										<p>Create your first Product</p>
+
+									</div>
+									<div class="tab-pane fade" id="invoices" role="tabpanel" aria-labelledby="invoices">
+										<div class="col-12 col-md-12">
+											<table class="table table-hover">
+												<thead>
+													<tr>
+														<th>Status</th>
+														<th>Invoice#</th>
+														<th>Invoice date</th>
+														<th>Total</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<span
+																class="badge badge-pill badge-success">Completed</span>
+														</td>
+														<td><a class="text-blue" href="invoice_view.html">4</a>
+														</td>
+														<td>2 Jan 2021</td>
+														<td>CA $3</td>
+													</tr>
+													<tr>
+														<td>
+															<span class="badge badge-pill badge-danger">Cancelled</span>
+														</td>
+														<td><a class="text-blue" href="invoice_view.html">5</a>
+														</td>
+														<td>5 Jan 2021</td>
+														<td>CA $1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="allServicesModal" tabindex="-1" role="dialog"
+			aria-labelledby="allServicesModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog " role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="font-weight-bolder m-auto modal-title" id="allServicesModalLongTitle">Redeemable
+							Services
+						</h4>
+						<h3 type="button" class="" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</h3>
+					</div>
+					<div class="modal-body">
+						<div class="m-auto ">
+							<div class="card-body">
+								<h3 class="font-weight-bolder">Hair</h3>
+								<div
+									class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+									<span>
+										<p class="mb-0 text-dark font-size-lg font-weight-bolder">Hair Cuts</p>
+										<p class="mb-0 text-muted font-size-lg">
+											1h
+										</p>
+									</span>
+									<h4>Ca $30</h4>
+								</div>
+								<div
+									class="mt-4 border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+									<span>
+										<p class="mb-0 text-dark font-size-lg font-weight-bolder">HairCut</p>
+										<p class="mb-0 text-muted font-size-lg">
+											1h 30min
+										</p>
+									</span>
+									<h4>Ca $25</h4>
+								</div>
+								<h3 class="mt-4 mb-1 font-weight-bolder">Spa</h3>
+								<div
+									class="border-bottom py-3 order-total d-flex align-items-center justify-content-between">
+									<span>
+										<p class="mb-0 text-dark font-size-lg font-weight-bolder">Blow Dry</p>
+										<p class="mb-0 text-muted font-size-lg">
+											1h 30min
+										</p>
+									</span>
+									<h4>Ca $25</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="kt_scrolltop" class="scrolltop">
+			<span class="svg-icon">
+
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+					height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24" />
+						<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+						<path
+							d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+							fill="#000000" fill-rule="nonzero" />
+					</g>
+				</svg>
+
+			</span>
+		</div>
+
+		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+
+
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
+		<script src="assets/js/pages/widgets.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var titleHeader = $('#title-header').outerHeight();
+				var customerData = $('.customer-data').outerHeight();
+				// var customerBottom = $('.customer-bottom').outerHeight();
+
+				$('.customer-bottom').css('height', 'calc(100vh - ' + titleHeader + 'px - ' + customerData + 'px)');
+				$('.content-height').css('height', 'calc(100vh - ' + titleHeader + 'px)');
+
+				var contentHeight = $('.content-height').css('height');
+				$('.side-overlay').css('height', contentHeight + 'px');
+
+				$('#dismiss, .side-overlay').on('click', function () {
+					$('#sidebar').removeClass('active');
+					$('.side-overlay').removeClass('active');
+				});
+
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').addClass('active');
+					$('.side-overlay').addClass('active');
+				});
+			});
+		</script>
+</body>
+
+
+
+</html>

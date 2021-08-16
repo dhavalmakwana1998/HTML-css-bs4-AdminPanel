@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+	<base href="">
+	<meta charset="utf-8" />
+	<title>Admin Design </title>
+	<meta name="description"
+		content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link href="assets/css/intlTelInput.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/image-picker.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+</head>
+
+
+
+
+<body id="kt_body" class="bg-white">
+	<div class="container-fluid p-0">
+		<div class="my-custom-body-wrapper">
+			<div class="my-custom-header">
+				<div class="p-4 d-flex justify-content-between align-items-center border-bottom">
+					<span class="d-flex">
+						<p class="cursor-pointer m-0 px-6" onclick="history.back();"><i
+								class="text-dark fa fa-times icon-lg"></i>
+						</p>
+						<p class="cursor-pointer text-blue previous" onclick="nextPrev(-1)"><i
+								class="border-left mx-4"></i>Previous</p>
+					</span>
+					<span>
+						<p class="text-dark text-center mb-0">Steps <span class="steps"></span> of 4</p>
+						<h1 class="font-weight-bolder page-title">Edit Content</h1>
+					</span>
+					<div>
+						<div class="dropdown dropdown-inline mr-2">
+							<button type="button" class="btn btn-lg btn-white font-weight-bolder dropdown-toggle"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Option</button>
+							<div class="dropdown-menu text-center dropdown-menu-right">
+								<ul class="navi flex-column navi-hover">
+									<li class="navi-item">
+										<a data-toggle="modal" data-target="#sendTestEmail" class="navi-link">
+											<span class="navi-text">Send test email</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button class="btn btn-lg btn-primary next-step" onclick="nextPrev(1)">Continue</button>
+					</div>
+				</div>
+			</div>
+			<div class="my-custom-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 col-md-4 p-0 last-hide" style="height:calc(100vh - 80px);overflow-y:scroll">
+							<div class="p-4">
+								<div class="edit-content-tab">
+									<h6>
+										Adjust the message text and upload your own images to customize the message
+										appearance. <a href="#" class="text-blue">Learn more.</a>
+									</h6>
+									<h3 class="font-weight-bolder">Header Image</h3>
+									<div class="form-group">
+										<!-- <label class="w-100 text-center">
+											<div class="card-body" id="img-uploader"
+												style="background-image: url(./assets/images/online-profile.jpg) ;">
+												<a class="btn btn-white">Change Header Hmage</a>
+											</div>
+											<input type='file' onchange="readURL(this);" class="d-none" />
+										</label> -->
+										<label class="w-100 text-center" data-toggle="modal"
+											data-target="#imgUploadModal">
+											<div class="card-body" id="img-uploader"
+												style="background-image: url(./assets/images/online-profile.jpg) ;">
+												<a class="btn btn-white">Change Header Hmage</a>
+											</div>
+										</label>
+										<h3 class="font-weight-bolder my-6">Text Content</h3>
+										<div class="form-group">
+											<label class="font-weight-bolder">Email subject</label>
+											<input type="text" id="email-subject"
+												value="We would love to see you again soon 🤗" class="form-control"
+												placeholder="">
+											<span class="text-muted">This text will display in your client's
+												inbox</span>
+										</div>
+										<div class="form-group">
+											<label class="font-weight-bolder">Headline text</label>
+											<input type="text" id="headline-input" value="First time's the charm!"
+												class="form-control" placeholder="">
+										</div>
+										<div class="form-group">
+											<h6 class="font-weight-bolder">Body text</h6>
+											<textarea id="body-input" class="form-control"
+												placeholder="Body text here..." rows="8"
+												class="text-dark-50 font-size-lg">We hope you enjoyed your first visit, we'd love to see you again soon so we're offering a discount just for you! </textarea>
+										</div>
+									</div>
+								</div>
+								<div class="edit-content-tab">
+									<h3 class="mb-4 font-weight-bolder">Set discount offer</h3>
+									<div class="form-group d-flex align-items-center">
+										<div>
+											<label class="font-weight-bolder">Discount value</label>
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text bg-white isPrice">
+														CA $
+													</span>
+													<span class="input-group-text bg-white isPercent">
+														%
+													</span>
+												</div>
+												<input class="form-control" id="discount-input" name="discount-type"
+													value="10">
+												<span class="text-dark-50">
+													Discount is applied individually to each applicable service
+													booked
+												</span>
+											</div>
+										</div>
+										<div class="w-70 ml-4">
+											<div class="tgl-radio-tabs">
+												<input id="price" value="price" type="radio"
+													class="form-check-input tgl-radio-tab-child" name="discount-type"
+													onclick="getDiscountType()">
+												<label for="price" class="radio-inline">CA $</label>
+
+												<input id="percent" value="percent" checked type="radio"
+													class="form-check-input tgl-radio-tab-child" name="discount-type"
+													onclick="getDiscountType()">
+												<label for="percent" class="radio-inline">%</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="font-weight-bolder">Max appointments booked</label>
+										<select class="form-control" onchange="appoinmentLimit(this)"
+											name="appoinmentsLimits">
+											<option value="1">1</option>
+											<option value="3">3</option>
+											<option value="5">5</option>
+											<option value="10">10</option>
+											<option selected value="unlimited">No limit</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="font-weight-bolder">Valid for</label>
+										<select class="form-control" onchange="validFor(this)" name="validFor">
+											<option value="5">5 days</option>
+											<option value="7">7 days</option>
+											<option value="10">10 days</option>
+											<option value="14">14 days</option>
+											<option value="30">30 days</option>
+											<option value="60">60 days</option>
+											<option value="90">90 days</option>
+										</select>
+										<span class="text-dark-50">Calculated from the date of sending the
+											email</span>
+									</div>
+									<div class="services">
+										<h4 class="font-weight-bolder">Apply to <span class="servicesApply">All</span>
+											services
+										</h4>
+										<div class="d-flex justify-content-between">
+											<h6 class="mr-4 text-dark-50">
+												This discount offer applies to specific services in your menu, you
+												can
+												adjust selections in the future
+											</h6>
+											<button data-toggle="modal" data-target="#servicesModal"
+												class="btn btn-md btn-primary">
+												Edit
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="edit-content-tab">
+									<h6>
+										This smart campaign audience is predefined, we've got this! <a href="#"
+											class="text-blue">Learn more.</a>
+									</h6>
+									<div class="form-group ml-2 w-100 d-flex extra-time">
+										<label class="option m-3">
+											<span class="option-control">
+												<span class="radio">
+													<input type="radio" name="m_option_1" value="1" checked="checked">
+													<span></span>
+												</span>
+											</span>
+											<span class="option-label">
+												<span class="option-head">
+													<span class="option-title">New clients</span>
+												</span>
+												<span class="option-body text-dark">
+													This smart campaign automatically sends to new clients one day
+													after
+													their first ever sale
+												</span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-8 p-0 bg-white last-hide"
+							style="height:calc(100vh - 80px);overflow-y:scroll">
+							<div class="p-6">
+								<div class="card w-70 m-auto">
+									<div class="card-body">
+										<h3>Gym area</h3>
+										<p class="text-dark-50">Canada Way, Burnaby</p>
+										<div class="card-img" style="margin:20px auto;height: auto;width:400px">
+											<img alt="img" id="img-preview" width="100%" height="auto" class="rounded"
+												src="./assets/images/online-profile.jpg" />
+										</div>
+										<h2 class="font-weight-bolder" id="headline-text">First time's the charm!
+										</h2>
+										<h6 class="text-dark-50 my-4" id="body-text">
+											We hope you enjoyed your first visit, we'd love to see you again soon so
+											we're offering a discount just for you!
+										</h6>
+										<hr>
+										<div class="preview-card-discount">
+											<div class="detail">
+												<h1 class="my-4 font-weight-bolder text-uppercase">
+													<span class="isPrice">$</span><span
+														class="discount-text">10</span><span class="isPercent">%</span>
+													Off
+												</h1>
+												<p>your next <span class="appoinmentLimit"></span> appointment</p>
+												<div class="text-uppercase btn btn-light">
+													Book Now
+												</div>
+											</div>
+										</div>
+										<p class="text-center my-4">Applies to <span class="servicesApply">All</span>
+											services, valid for <span class="validFor">5</span> days</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 edit-content-tab last-tab">
+							<div class="w-35 text-center center mx-auto my-30 align-items-center">
+								<div class="mx-auto my-8" style="width: 80px;height: 80px;">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 84">
+										<path fill="#b4dff2" d="M2.9-1.1h67.6v44.4L36.7 13.9 26 21.1 2.9 43.3z"
+											transform="matrix(1 0 0 -1 0 80)"></path>
+										<path fill="#7abdd9" d="M6.7-1H2v44l4.7-2.9V2.6"
+											transform="matrix(1 0 0 -1 0 80)"></path>
+										<path
+											d="M37.8 64.1l2.7-7.9h8.2c1.3 0 1.8-1.6.8-2.4l-6.6-5.1 2.4-7.8c.4-1.2-1-2.2-2-1.5L36.5 44l-6.8-4.6c-1.1-.7-2.4.3-2 1.5l2.4 7.8-6.6 5.1c-1 .8-.5 2.4.8 2.4h8.2l2.7 7.9c.4 1.2 2.2 1.2 2.6 0z"
+											fill="#ffe78c" transform="matrix(1 0 0 -1 0 80)"></path>
+										<g>
+											<path fill="#39394f"
+												d="M71.5 35.2l-6.3-6.5s-.1-.1-.2-.1V13.1c0-.4-.1-.7-.4-.9L53.5 1.1c-.2-.2-.6-.4-.9-.4H10.7c-.8 0-1.4.6-1.4 1.3v26.1l-7.4 7.1C1.1 36 .7 37 .7 38.1v41.2c0 2.2 1.8 4.1 4.1 4.1h63.8c2.3 0 4.1-1.8 4.1-4.1V38.1c0-1.1-.4-2.2-1.2-2.9zM3.3 79.3V38.9l21.8 20.7-21.7 20c0-.1-.1-.2-.1-.3zM27 61.4l3 2.8c3.7 3.6 9.6 3.6 13.3 0l3-2.8 20.8 19.2H6.2L27 61.4zm43.1 17.9c0 .2 0 .3-.1.4L48.3 59.6l21.8-20.7v40.4zm-1.2-43L65 40v-7.7l3.9 4zm-8-24.1h-7.4V4.8l7.4 7.4zM12 3.3h38.8v10.2c0 .7.6 1.3 1.3 1.3h10.2v27.6l-20.8 20c-2.7 2.6-6.9 2.6-9.6 0L12 43.5V3.3zM9.3 40.9l-4.8-4.6 4.8-4.6v9.2z">
+											</path>
+											<path fill="#39394f"
+												d="M22.7 27.3l5.9 4.5-2.2 6.9c-.3 1.1 0 2.3 1 3 .9.7 2.2.7 3.1.1l6-4.1 6 4.1c.5.3 1 .5 1.5.5.6 0 1.1-.2 1.6-.5.9-.7 1.3-1.8 1-3l-2.2-6.9 5.9-4.5c.9-.7 1.3-1.9.9-3s-1.4-1.8-2.5-1.8h-7.3l-2.4-7c-.4-1.1-1.4-1.8-2.5-1.8-1.2 0-2.2.7-2.5 1.8l-2.4 7h-7.3c-1.2 0-2.2.7-2.5 1.8-.4 1 0 2.2.9 2.9zm9.9-2.1c.6 0 1.1-.4 1.3-.9l2.7-7.9 2.7 7.9c.2.5.7.9 1.3.9h8.2l-6.8 5c-.4.3-.6.9-.5 1.5l2.4 7.8-6.8-4.6c-.2-.2-.5-.2-.8-.2s-.5.1-.8.2L29 39.5l2.4-7.8c.2-.5 0-1.1-.5-1.5l-6.6-5.1 8.3.1z">
+											</path>
+										</g>
+									</svg>
+								</div>
+								<h3 class="my-4 font-weight-bolder">Almost Done!</h3>
+								<p class="my-4">Your smart campaign is ready to go, once enabled it will
+									automatically
+									send messages
+									to clients on an ongoing basis. You
+									can easily modify or pause this campaign at any time.</p>
+								<div class="my-6 d-flex justify-content-around">
+									<button class="btn btn-lg btn-white" data-toggle="modal"
+										data-target="#PreviewBirthdayModal">Preview</button>
+									<button class="btn btn-lg btn-primary">Update Campaign</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="imgUploadModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="font-weight-bolder modal-title">Choose a photo</h4>
+					<p class="cursor-pointer m-0 px-2" data-dismiss="modal"><i
+							class="text-dark fa fa-times icon-lg"></i>
+					</p>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-pills round-nav mx-auto" id="myTab1" role="tablist" style="width: max-content;">
+						<li class="nav-item font-weight-bolder">
+							<a class="nav-link active" id="uploaded-tab-1" data-toggle="tab" href="#uploaded">
+								<span class="nav-text">Uploaded images</span>
+							</a>
+						</li>
+						<li class="nav-item font-weight-bolder">
+							<a class="nav-link" id="library-tab-1" data-toggle="tab" href="#library"
+								aria-controls="library">
+								<span class="nav-text">Fresha library</span>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent1">
+						<div class="tab-pane fade active show" id="uploaded" role="tabpanel"
+							aria-labelledby="uploaded-tab-1">
+							<div class="card mx-auto mt-16">
+								<div class="row filesDiv">
+									<select id="filesDiv" style="position: relative;" class="image-picker show-html">
+										<option data-img-src="./assets/images/birthday-gift.png" data-img-class="first"
+											data-img-alt="Page 1" value="1"> Page 1 </option>
+										<option data-img-src="./assets/images/birthday-gift.png" data-img-alt="Page 12"
+											data-img-class="last" value="12"> Page 12
+											<br><span class="remove btn btn-white btn-sm p-1"
+												style="position:absolute;top:20px;left:20px"><i
+													class="p-0 fa fa-trash text-danger"></i></span>
+										</option>
+									</select>
+
+									<label class="" style="height: 120px;width: 130px;">
+										<input type="file" id="files" name="files[]" multiple="" class="d-none">
+										<div class="h-100 card mx-auto">
+											<div class="h-100 py-6 rounded cursor-pointer"
+												style="background-color: #e5f1ff;border: 1px solid #037aff !important;">
+												<div class="mx-auto my-4" style="width: 45px;height:45px">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 47">
+														<path
+															d="M48 21.147a1 1 0 0 0 2 0V3.528C50 2.005 48.776.766 47.26.766H2.74C1.225.766 0 2.006 0 3.528v34.476c0 1.523 1.224 2.762 2.74 2.762h20.89a1 1 0 0 0 0-2H2.74a.751.751 0 0 1-.74-.762V3.528c0-.424.334-.762.74-.762h44.52c.406 0 .74.338.74.762v17.62z">
+														</path>
+														<path
+															d="M44 21.499a1 1 0 0 0 2 0V5.617a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v30a1 1 0 0 0 1 1h19.13a1 1 0 0 0 0-2H6v-28h38v14.882z">
+														</path>
+														<path
+															d="M19.34 14.63a4.575 4.575 0 1 0-9.149 0 4.575 4.575 0 0 0 9.15 0zm-2 0a2.575 2.575 0 1 1-5.149 0 2.575 2.575 0 0 1 5.15 0zM32.606 17.98l2.225 3.944a1 1 0 1 0 1.742-.982l-2.985-5.292a1 1 0 0 0-1.677-.101l-9.673 13.164-6.09-6.216a1 1 0 0 0-1.48.057L4.298 34.902a1 1 0 0 0 .766 1.643h19.012a1 1 0 1 0 0-2H7.21l8.281-9.86 6.142 6.268a1 1 0 0 0 1.52-.108l9.453-12.865z">
+														</path>
+														<path
+															d="M51 35.25c0-6.192-5.02-11.212-11.213-11.212-6.192 0-11.213 5.02-11.213 11.212 0 6.193 5.02 11.213 11.213 11.213S51 41.443 51 35.25zm-2 0a9.213 9.213 0 1 1-18.426 0 9.213 9.213 0 0 1 18.426 0z">
+														</path>
+														<path
+															d="M38.838 29.87v10.213c0 1.333 2 1.333 2 0V29.87c0-1.333-2-1.333-2 0z">
+														</path>
+														<path
+															d="M34.68 35.76h10.214c1.333 0 1.333-2 0-2H34.68c-1.333 0-1.333 2 0 2z">
+														</path>
+													</svg>
+												</div>
+												<h6 class="text-center font-weight-bolder">Upload photo
+												</h6>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="library" role="tabpanel" aria-labelledby="library-tab-1">
+							<div class="card mx-auto my-4 library-images">
+								<select id="library-images" style="position: relative;" class="image-picker show-html">
+									<option data-img-src="./assets/images/announcement.png" data-img-class="first"
+										data-img-alt="Page 1" value="1"> Page 1 </option>
+									<option data-img-src="./assets/images/birthday-gift.png" data-img-alt="Page 2"
+										value="2"> img 2
+									</option>
+									<option data-img-src="./assets/images/announcement.png" data-img-alt="img 3"
+										value="3"> img 3
+									</option>
+									<option data-img-src="./assets/images/birthday-gift.png" data-img-alt="img 4"
+										value="4"> img 4
+									</option>
+									<option data-img-src="./assets/images/announcement.png" data-img-alt="img 5"
+										value="5"> img 5
+									</option>
+									<option data-img-src="./assets/images/birthday-gift.png" data-img-alt="img 6"
+										value="6"> img 6
+									</option>
+									<option data-img-src="./assets/images/announcement.png" data-img-alt="img 7"
+										value="7"> img 7
+									</option>
+									<option data-img-src="./assets/images/birthday-gift.png" data-img-alt="img 8"
+										value="8"> img 8
+									</option>
+									<option data-img-src="./assets/images/announcement.png" data-img-alt="img 9"
+										value="9"> img 9
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary">Reset</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="servicesModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header d-flex justify-content-between">
+					<h4 class="modal-title">Select services</h4>
+					<button type="button" class="text-dark close" data-dismiss="modal">×</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="form-group">
+						<div class="input-icon input-icon-right">
+							<input type="text" class="rounded-0 form-control"
+								placeholder="Scan barcode or search any item">
+							<span>
+								<i class="flaticon2-search-1 icon-md"></i>
+							</span>
+						</div>
+					</div>
+					<hr class="m-0">
+
+					<div class="multicheckbox">
+						<ul id="treeview">
+							<li>
+								<label for="all" class="checkbox allService">
+									<input type="checkbox" name="all" id="all">
+									<span></span>
+									All Services
+								</label>
+								<ul>
+									<li>
+										<label for="all-spa" class="checkbox">
+											<input type="checkbox" name="all-spa" id="all-spa">
+											<span></span>
+											Spa
+										</label>
+										<ul>
+											<li>
+												<label for="all-spa-1" class="checkbox">
+													<input type="checkbox" name="value_checkbox" id="all-spa-1">
+													<span></span>
+													<div class="d-flex align-items-center w-100">
+														<span class="m-0">
+															Blow Dry
+															<p class="m-0 text-muted">1h 30min</p>
+														</span>
+														<span class="ml-auto">
+															CA $30
+														</span>
+													</div>
+												</label>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<label for="all-hair" class="checkbox">
+											<input type="checkbox" name="all-hair" id="all-hair">
+											<span></span>
+											Hair
+										</label>
+
+										<ul>
+											<li>
+												<label for="all-hair-1" class="checkbox">
+													<input type="checkbox" name="value_checkbox" id="all-hair-1">
+													<span></span>
+													<div class="d-flex align-items-center w-100">
+														<span class="m-0">
+															Hair Cut
+															<p class="m-0 text-muted">1h 30min</p>
+														</span>
+														<span class="ml-auto">
+															CA $25
+														</span>
+													</div>
+												</label>
+											</li>
+											<li>
+												<label for="all-hair-2" class="checkbox">
+													<input type="checkbox" name="value_checkbox" id="all-hair-2">
+													<span></span>
+													<div class="d-flex align-items-center w-100">
+														<span class="m-0">
+															Hair Cuts
+															<p class="m-0 text-muted">1h</p>
+														</span>
+														<span class="ml-auto">
+															CA $30
+														</span>
+													</div>
+												</label>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Select Services</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="sendTestEmail">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="font-weight-bolder modal-title">Send a test email</h4>
+					<p class="cursor-pointer m-0 px-2" data-dismiss="modal"><i
+							class="text-dark fa fa-times icon-lg"></i>
+					</p>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="font-weight-bold">Email</label>
+						<input type="email" class="form-control" placeholder="email@gmail.com" />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Reset</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="PreviewBirthdayModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="font-weight-bolder modal-title">Preview Campaign</h4>
+					<p class="cursor-pointer m-0 px-2" data-dismiss="modal"><i
+							class="text-dark fa fa-times icon-lg"></i>
+					</p>
+				</div>
+				<div class="modal-body">
+					<div class="card">
+						<div class="card-body">
+							<h3>Gym area</h3>
+							<p class="text-dark-50">Canada Way, Burnaby</p>
+							<div class="card-img" style="margin:20px auto;height: auto;width:400px">
+								<img alt="img" width="100%" height="auto" class="rounded"
+									src="./assets/images/online-profile.jpg" />
+							</div>
+							<h2 class="font-weight-bolder" id="headline-text">First time's the charm!</h2>
+							<h6 class="text-dark-50 my-4" id="body-text">
+								We hope you enjoyed your first visit, we'd love to see you again soon so
+								we're offering a discount just for you!
+							</h6>
+							<hr>
+							<div class="preview-card-discount">
+								<div class="detail">
+									<h1 class="my-4 font-weight-bolder text-uppercase">
+										<span class="isPrice">$</span><span class="discount-text">10</span><span
+											class="isPercent">%</span>
+										Off
+									</h1>
+									<p>your next <span class="appoinmentLimit"></span> appointment</p>
+									<div class="text-uppercase btn btn-light">
+										Book Now
+									</div>
+								</div>
+							</div>
+							<p class="text-center my-4">Applies to <span class="servicesApply">All</span>
+								services, valid for <span class="validFor">5</span> days</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="kt_scrolltop" class="scrolltop">
+		<span class="svg-icon">
+
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+				height="24px" viewBox="0 0 24 24" version="1.1">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<polygon points="0 0 24 0 24 24 0 24" />
+					<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+					<path
+						d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+						fill="#000000" fill-rule="nonzero" />
+				</g>
+			</svg>
+
+		</span>
+	</div>
+
+	<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
+	<script src="assets/plugins/global/plugins.bundle.js"></script>
+	<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+	<script src="assets/js/scripts.bundle.js"></script>
+
+
+	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
+	<script src="assets/js/pages/widgets.js"></script>
+
+	<script src="assets/js/hummingbird-treeview-1.3.js"></script>
+
+	<script src="assets/js/image-picker.js"></script>
+	<script>
+		$("#treeview").hummingbird();
+		$("#treeview").on("CheckUncheckDone", function () {
+			var count = $('input[name="value_checkbox"]:checked').length;
+			var allCount = $('input[type="checkbox"]:checked').length;
+			var allCheck = $('input[type="checkbox"]').length;
+
+			if (allCheck == allCount) {
+				$(".servicesApply").text('All')
+			} else {
+				$(".servicesApply").text(count)
+			}
+		});
+
+	</script>
+
+
+	<script>
+		var currentTab = 0; // Current tab is set to be the first tab (0)
+		showTab(currentTab); // Display the current tab
+
+		function showTab(n) {
+			// This function will display the specified tab of the form...
+			var tab = document.getElementsByClassName("edit-content-tab");
+			tab[n].style.display = "block";
+			if (n == (tab.length - 1)) {
+				$(".last-hide").hide();
+				$(".last-show").hide();
+				$(".next-step").hide();
+				$(".previous").show();
+				$(".steps").text("3");
+
+			} else {
+				$(".last-show").show();
+				$(".last-hide").show();
+				$(".next-step").show();
+				$(".previous").hide();
+				$(".next-step").text("Next Step");
+			}
+
+			if (n == 0) {
+				$(".steps").text("1");
+				$(".page-title").text("Edit Content");
+			} else if (n == 1) {
+				$(".previous").show();
+				$(".steps").text("2");
+				$(".page-title").text("Discount Offer");
+			} else if (n == 2) {
+				$(".previous").show();
+				$(".steps").text("3");
+				$(".page-title").text("Campaign Audience");
+			}
+			else if (n == 3) {
+				$(".previous").show();
+				$(".steps").text("4");
+				$(".page-title").text("Update Campaign");
+			}
+		}
+
+		function nextPrev(n) {
+			// This function will figure out which tab to display
+			var tab = document.getElementsByClassName("edit-content-tab");
+			// Hide the current tab:
+			tab[currentTab].style.display = "none";
+			// Increase or decrease the current tab by 1:
+			currentTab = currentTab + n;
+			// if you have reached the end of the tab
+			// Otherwise, display the correct tab:
+			showTab(currentTab);
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#headline-input").keyup(function () {
+				$('#headline-text').text($(this).val())
+			});
+			$("#body-input").keyup(function () {
+				$('#body-text').html($(this).val().replace(/\n/g, '<br />'))
+			});
+			$("#discount-input").keyup(function () {
+				$('.discount-text').html($(this).val())
+			});
+
+
+			$(".isPrice").show();
+			$(".isPercent").hide();
+		})
+		function appoinmentLimit(data) {
+			if (data.value === "unlimited") {
+				$('.appoinmentLimit').text("")
+			} else {
+				$('.appoinmentLimit').text(data.value)
+			}
+		}
+		function validFor(data) {
+			if (data.value === "unlimited") {
+				$('.validFor').text("")
+			} else {
+				$('.validFor').text(data.value)
+			}
+		}
+		function getDiscountType() {
+			var type = $('input[name="discount-type"]:checked').val();
+			if (type === 'price') {
+				$(".isPrice").show();
+				$(".isPercent").hide();
+			} else {
+				$(".isPrice").hide();
+				$(".isPercent").show();
+			}
+		}
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#img-uploader').css("background-image", "url(" + e.target.result + ")");
+					$('#img-preview').attr('src', e.target.result);
+				};
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+			$("#filesDiv").imagepicker();
+			$("#library-images").imagepicker({
+				hide_select: true,
+				show_label: false,
+				selected: function (select) {
+					console.log(select)
+				}
+
+			});
+			if (window.File && window.FileList && window.FileReader) {
+				$("#files").on("change", function (e) {
+					var files = e.target.files,
+						filesLength = files.length;
+					for (var i = 0; i < filesLength; i++) {
+						var f = files[i]
+						var fileReader = new FileReader();
+						fileReader.onload = (function (e) {
+							var file = e.target;
+							$("<span class=\"p-4 pip\" style='position:relative'>" +
+								"<img height='100px' width='120px' class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+								"<br/><span class=\"remove btn btn-white btn-sm p-1\" style='position:absolute;top:20px;left:20px'><i class='p-0 fa fa-trash text-danger'></i></span>" +
+								"</span>").insertAfter("#filesDiv");
+							$(".remove").click(function () {
+								$(this).parent(".pip").remove();
+							});
+
+							// Old code here
+							/*$("<img></img>", {
+							  class: "imageThumb",
+							  src: e.target.result,
+							  title: file.name + " | Click to remove"
+							}).insertAfter("#files").click(function(){$(this).remove();});*/
+
+						});
+						fileReader.readAsDataURL(f);
+					}
+					console.log(files);
+				});
+			} else {
+				alert("Your browser doesn't support to File API")
+			}
+		});
+	</script>
+</body>
+
+</html>
